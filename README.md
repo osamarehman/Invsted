@@ -1,6 +1,6 @@
 # Full-Stack NextJS With Express and TypeScript
 
-**This is the project for Invsted.org **
+**This is the project for Invsted.org**
 
 
 
