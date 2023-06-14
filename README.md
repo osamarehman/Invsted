@@ -1,8 +1,8 @@
-# Full-Stack NextJS With Express and TypeScript Course
+# Full-Stack NextJS With Express and TypeScript
 
-**This is the project we build in my course: https://codinginflow.com/nextjs**
+**This is the project for Invsted.org **
 
-It's a full-stack blogging website similar to Medium.com
+
 
 **👀 Features:**
 
@@ -26,4 +26,3 @@ It's a full-stack blogging website similar to Medium.com
 - **Deploy** everything to a real web hosting and learn how to **protect your server from hackers**
 - and much **more**...
 
-![Thumbnail 550x550](https://user-images.githubusercontent.com/52977034/236390758-a313f5d9-eada-4a7b-920c-ca2584460097.png)
