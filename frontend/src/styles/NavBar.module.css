@@ -1,15 +1,50 @@
-.brandText {
-    background-image: linear-gradient(90deg, var(--bs-primary), white);
-    background-color: white;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    font-weight: bold;
-}
-
 .accountDropdown :global(.dropdown-toggle) {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.navBar {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 8px 8px 0px 8px;
+}
+
+.logoImg {
+    width: 202px;
+    height: auto;
+}
+
+.navContainer {
+    max-width: 100vw;
+    padding: 16px 20px
+}
+
+.navLinks {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0);
+    margin-right: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s;
+    padding: 10px 0px;
+}
+
+.navLinks:hover {
+    color: #69df41;
+}
+
+.navBtn {
+    box-shadow: none;
+    color: #222525;
+    padding: 10px 24px;
+    font-weight: 700;
+    background-color: #f8f6f4;
+    border-color: #f8f6f4;
+    transition: border-color .2s, background-color .2s;
+    position: relative;
+}
+
+.navBtn:hover {
+    background-color: #ecebea;
+    border-color: #ecebea;
 }

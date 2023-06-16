@@ -36,20 +36,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <SSRProvider>
-        <AuthModalsProvider>
-          <div className={inter.className}>
-            <NextNProgress color="#21FA90" />
-            <NavBar />
-            <main>
-              <Container className={styles.pageContainer}>
-                <Component {...pageProps} />
-              </Container>
-            </main>
-            <Footer />
-          </div>
-        </AuthModalsProvider>
-      </SSRProvider>
+      <div>
+        <main>
+          <Component {...pageProps} />
+        </main>
+      </div>
     </>
   );
 }

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { FiEdit } from "react-icons/fi";
-import logo from "@/assets/images/flow-blog-logo.png";
+import logo from "@/assets/images/invsted-logo.png";
 import Image from "next/image";
 import styles from "@/styles/NavBar.module.css";
 import useAuthenticatedUser from "@/hooks/useAuthenticatedUser";
@@ -18,23 +18,17 @@ export default function NavBar() {
     const router = useRouter();
 
     return (
-        <Navbar expand="md" collapseOnSelect variant="dark" bg="body" sticky="top">
-            <Container>
+        <Navbar expand="md" collapseOnSelect className={styles.navBar}>
+            <Container className={styles.navContainer}>
                 <Navbar.Brand as={Link} href="/" className="d-flex gap-1">
                     <Image
                         src={logo}
                         alt="Flow Blog logo"
-                        width={30}
-                        height={30}
+                        className={styles.logoImg}
                     />
-                    <span className={styles.brandText}>Flow Blog</span>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="main-navbar" />
+                <Navbar.Toggle aria-controls="main-navbar" className="border-0" />
                 <Navbar.Collapse id="main-navbar">
-                    <Nav>
-                        <Nav.Link as={Link} href="/" active={router.pathname === "/"}>Home</Nav.Link>
-                        <Nav.Link as={Link} href="/blog" active={router.pathname === "/blog"}>Articles</Nav.Link>
-                    </Nav>
                     {user ? <LoggedInView user={user} /> : <LoggedOutView />}
                 </Navbar.Collapse>
             </Container>
@@ -101,16 +95,14 @@ function LoggedOutView() {
 
     return (
         <Nav className="ms-auto">
-            <Button
-                variant="outline-primary"
-                className="ms-md-2 mt-2 mt-md-0"
-                onClick={() => authModalsContext.showLoginModal()}>
-                Log In
-            </Button>
-            <Button
-                onClick={() => authModalsContext.showSignUpModal()}
-                className="ms-md-2 mt-2 mt-md-0">
+            <Nav.Link as={Link} href="/signup" className={`${styles.navLinks}`}>
                 Sign Up
+            </Nav.Link>
+            <Nav.Link as={Link} href="/login" className={`${styles.navLinks}`}>
+                Login
+            </Nav.Link>
+            <Button className={`${styles.navBtn}`}>
+                Learn More
             </Button>
         </Nav>
     );
