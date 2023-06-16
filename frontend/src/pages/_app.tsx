@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
+//Need to add SSR provider here, as it was before for server side rendering
       <div>
         <main>
           <Component {...pageProps} />
