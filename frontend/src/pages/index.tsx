@@ -1,57 +1,109 @@
-import styles from '@/styles/Home.module.css'
-import logo from "../assets/images/flow-blog-logo.png";
-import Image from 'next/image';
-import { Col, Row } from 'react-bootstrap';
+import Card from "@/components/Card";
+import HeroBanner from "@/components/HeroBanner";
+import InfoSection from "@/components/InfoSection";
+import NavBar from "@/components/NavBar";
+import NotificationBar from "@/components/NotificationBar";
+import styles from "@/styles/App.module.css";
+import { Container } from "react-bootstrap";
+import InfoImage1 from "../assets/images/info-image-1.png";
+import InfoImage2 from "../assets/images/info-image-2.png";
+import InfoImage3 from "../assets/images/info-image-3.png";
 
 export default function Home() {
   return (
-    <div className={styles.main}>
-      <Row className="align-items-center mb-3 gap-2">
-        <Col md="auto" className='px-1'>
-          <Image
-            src={logo}
-            alt="The Flow Blog logo"
-            width={100}
-            height={100}
-            className={styles.headlineLogo}
-          />
-        </Col>
-        <Col md="auto" className='px-1'>
-          <h1 className={styles.headlineText}>
-            Flow Blog
-          </h1>
-        </Col>
-      </Row>
-
-      <h2>Tutorial project by Coding in Flow</h2>
-      <p>This is a <strong>full-stack</strong> blogging website built with <strong>NextJS</strong>, <strong>ExpressJS</strong>, and <strong>TypeScript</strong> 💚</p>
-      <p>🌟 Get my <a href='https://codinginflow.com/nextjs'><strong>NextJS course</strong></a> to learn how to build this!</p>
-      <br />
-      <p className='h5'><strong>👀 Features:</strong></p>
-      <ul className='text-start w-80'>
-        <li><strong>User accounts & profiles</strong>. Sign up either via email & password or <strong>social providers</strong> (Google/GitHub)</li>
-        <li>Users can create and update blog posts via a <strong>markdown editor</strong></li>
-        <li><strong>Upload images</strong> & resize them on our own backend server</li>
-        <li>A fully-fledged <strong>comment system</strong> with sub-comments and edit/delete functionality</li>
-        <li>Pagination with both <strong>page numbers</strong> and <strong>infinite loading</strong></li>
-        <li>A fully <strong>mobile-responsive</strong> layout & custom theme based on Bootstrap</li>
-        <li>A complete backend server built with <strong>ExpressJS</strong> and <strong>MongoDB</strong></li>
-      </ul>
-      <br />
-      <p className='h5'><strong>💡 Concepts covered:</strong></p>
-      <ul className='text-start w-80'>
-        <li>Advanced NextJS <strong>server-side rendering strategies</strong> like on-demand revalidation</li>
-        <li>Client-side <strong>request caching & revalidation</strong> using <strong>SWR</strong> (NextJS&apos; React-Query alternative)</li>
-        <li><strong>Advanced React concepts</strong> like context providers, custom hooks, and effect cleanup</li>
-        <li><strong>Form handling</strong> with React-Hook-Form and Yup</li>
-        <li><strong>Security best practices</strong> like validation of user input & file uploads, and rate-limiting</li>
-        <li><strong>User email verification</strong> and <strong>password reset</strong> without expensive backend services like Firebase</li>
-        <li><strong>Redis</strong> as a local session storage for super fast access</li>
-        <li><strong>Deploy</strong> everything to a real web hosting and learn how to <strong>protect your server from hackers</strong></li>
-        <li>and much <strong>more</strong>...</li>
-      </ul>
-      <br />
-      <p className='w-80'>💻 This course goes beyond normal YouTube tutorials and teaches you how to build <strong>real production websites.</strong></p>
+    <div>
+      <NotificationBar
+        text={<>Not sure who to donate to? <strong>Donate to our Equity Fund</strong></>}
+        linkText="Learn More"
+      />
+      <NavBar />
+      <HeroBanner />
+      <section
+        id="getting-started-section"
+        className={styles.gettingStartedSection}
+      >
+        <Container className={styles.gettingStartedContainer}>
+          <div className={styles.pricingSection}>
+            <Card
+              type="Students"
+              title="We know every little bit makes a difference."
+              description="invstED allows others to provide the every day support you need so you can focus on school, not your struggles."
+              backgroundColor="#ffe000"
+            />
+            <Card
+              type="Investors"
+              title="Through invstED, giving is easier and more impactful."
+              description="‍Get connected to high-potential students in need of financial support, so you can give in ways that matter."
+              backgroundColor="#31c1ff"
+            />
+          </div>
+        </Container>
+      </section>
+      <InfoSection
+        src={InfoImage1}
+        title={"What is the problem?"}
+        top="-100px"
+        left="-80px"
+        textNode={
+          <strong className="bold-text-6">
+            For most low-income students, support comes from scholarships,
+            bursaries  loans. This amounts to an average of £580/$667 a
+            month.
+            <br />
+            <br />
+            However, student costs far exceed their support, with food, rent,
+            books &amp; other expenses averaging £909/$1045 a
+            month.
+            <br />
+            <br />
+            Students face an average gap of £329/$379 a month between what they
+            have and what they need. This is what we aim to fill at invstED.
+          </strong>
+        }
+        justifyContent="end"
+        backgroundColor="#ffe000"
+        titleColor="#000"
+      />
+      <InfoSection
+        src={InfoImage2}
+        title={"How does our platform work?"}
+        top="-75px"
+        right="-100px"
+        textNode={
+          <strong className="bold-text-6">
+            When you join invstED, you can choose between donating to a 
+            specific student or to our Equity Fund. 
+            <br />
+            <br />
+            If you choose a student, you can support them in one of the 
+            many ways we have available including a once-off amount or monthly 
+            recurring donations.
+          </strong>
+        }
+        justifyContent="start"
+        backgroundColor="#31c1ff"
+        titleColor="#fff"
+      />
+      <InfoSection
+        src={InfoImage3}
+        title={"Where does your money go?"}
+        top="0px"
+        left="-50px"
+        textNode={
+          <strong className="bold-text-6">
+            When you join invstED, you can choose between donating to a 
+            specific student or to our Equity Fund. 
+            <br />
+            <br />
+            If you choose a student, you can support them in one of the 
+            many ways we have available including a once-off amount or monthly 
+            recurring donations.
+          </strong>
+        }
+        justifyContent="end"
+        backgroundColor="#ffe000"
+        titleColor="#fff"
+      />
     </div>
-  )
+  );
 }
