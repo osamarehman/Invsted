@@ -3,6 +3,9 @@ import HeroBanner from "@/components/HeroBanner";
 import InfoSection from "@/components/InfoSection";
 import NavBar from "@/components/NavBar";
 import NotificationBar from "@/components/NotificationBar";
+import ShortDemoSection from "@/components/ShortDemoSection";
+import StorySection from "@/components/StorySection";
+import { InvstEdShortDemoLink } from "@/config";
 import styles from "@/styles/App.module.css";
 import { Container } from "react-bootstrap";
 import InfoImage1 from "../assets/images/info-image-1.png";
@@ -104,6 +107,8 @@ export default function Home() {
         backgroundColor="#ffe000"
         titleColor="#fff"
       />
+      <ShortDemoSection />
+      <StorySection />
     </div>
   );
 }
