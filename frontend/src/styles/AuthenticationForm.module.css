@@ -1,0 +1,113 @@
+
+.authSection {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    background-image: url(../assets/images/invsted-bg-img.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 5%;
+    display: flex;
+}
+
+.authContainer {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ecebea;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.authTitle {
+    color: #31c1ff;
+    background-color: rgba(0, 0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0;
+    padding: 10px;
+    font-family: Montserrat, sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 42px;
+    margin-top: 20px;
+}
+
+.authDescription {
+    font-family: Questrial, sans-serif;
+}
+
+.formBlock {
+    margin-bottom: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.form {
+    border-bottom-style: none;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-bottom: 0;
+    text-align: center;
+    background-color: #fff;
+    padding: 35px;
+}
+
+.formLabel {
+    color: #000;
+    margin-bottom: 3px;
+    font-family: Montserrat, sans-serif;
+    font-size: 13.5px;
+    font-weight: 600;
+    display: block;
+    text-align: left;
+}
+
+.formInput {
+    background-color: #e8f0fe;
+    height: 48px;
+    border: 1px solid #ecebea;
+    border-radius: 5px;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    font-family: Questrial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    transition: border-color .2s;
+    width: 100%;
+    color: #333;
+    display: block;
+}
+
+.submitBtn {
+    width: 100%;
+    margin-right: 0;
+    color: #000;
+    background-color: #69df41;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: box-shadow .2s;
+    position: relative;
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0);
+    margin-top: 20px;
+}
+
+.infoMsg {
+    margin-bottom: 10px;
+    color: #00000099;
+    margin-top: 3px;
+    font-family: Questrial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0px;
+    text-align: left;
+}
