@@ -2,11 +2,13 @@ import Card from "@/components/Card";
 import HeroBanner from "@/components/HeroBanner";
 import InfoSection from "@/components/InfoSection";
 import NavBar from "@/components/NavBar";
+import NewsLetterSection from "@/components/NewsLetterSection";
 import NotificationBar from "@/components/NotificationBar";
 import ShortDemoSection from "@/components/ShortDemoSection";
 import StorySection from "@/components/StorySection";
 import { InvstEdShortDemoLink } from "@/config";
 import styles from "@/styles/App.module.css";
+import Link from "next/link";
 import { Container } from "react-bootstrap";
 import InfoImage1 from "../assets/images/info-image-1.png";
 import InfoImage2 from "../assets/images/info-image-2.png";
@@ -109,6 +111,17 @@ export default function Home() {
       />
       <ShortDemoSection />
       <StorySection />
+      <section id="join-community-section" className={styles.communitySection}>
+        <div className={styles.imageOverlay}>
+          <Container className={styles.communityContainer}>
+            <NewsLetterSection />
+            <div className={styles.communityTextSection}>
+              <p className={styles.communityText}>Be a part of someone&#39;s success</p>
+              <Link href="/" className={styles.link}>Join Now</Link>
+            </div>
+          </Container>
+        </div>
+      </section>
     </div>
   );
 }
