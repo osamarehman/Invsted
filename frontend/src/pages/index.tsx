@@ -9,16 +9,22 @@ import StorySection from "@/components/Sections/StorySection";
 import styles from "@/styles/App.module.css";
 import Link from "next/link";
 import { Container } from "react-bootstrap";
-import InfoImage1 from "../assets/images/info-image-1.png";
-import InfoImage2 from "../assets/images/info-image-2.png";
-import InfoImage3 from "../assets/images/info-image-3.png";
+import InfoImage1 from "@/assets/images/info-image-1.png";
+import InfoImage2 from "@/assets/images/info-image-2.png";
+import InfoImage3 from "@/assets/images/info-image-3.png";
+import StatImage1 from "@/assets/images/stats-1.png";
 import Footer from "@/components/Layout/Footer";
 
 export default function Home() {
   return (
     <div>
       <NotificationBar
-        text={<>Not sure who to donate to? <strong>Donate to our Equity Fund</strong></>}
+        text={
+          <>
+            Not sure who to donate to?{" "}
+            <strong>Donate to our Equity Fund</strong>
+          </>
+        }
         linkText="Learn More"
       />
       <NavBar />
@@ -52,13 +58,11 @@ export default function Home() {
         textNode={
           <strong className="bold-text-6">
             For most low-income students, support comes from scholarships,
-            bursaries  loans. This amounts to an average of £580/$667 a
-            month.
+            bursaries loans. This amounts to an average of £580/$667 a month.
             <br />
             <br />
             However, student costs far exceed their support, with food, rent,
-            books &amp; other expenses averaging £909/$1045 a
-            month.
+            books &amp; other expenses averaging £909/$1045 a month.
             <br />
             <br />
             Students face an average gap of £329/$379 a month between what they
@@ -68,6 +72,8 @@ export default function Home() {
         justifyContent="end"
         backgroundColor="#ffe000"
         titleColor="#000"
+        isStats={true}
+        statSRC={StatImage1}
       />
       <InfoSection
         src={InfoImage2}
@@ -76,12 +82,12 @@ export default function Home() {
         right="-100px"
         textNode={
           <strong className="bold-text-6">
-            When you join invstED, you can choose between donating to a 
-            specific student or to our Equity Fund. 
+            When you join invstED, you can choose between donating to a specific
+            student or to our Equity Fund.
             <br />
             <br />
-            If you choose a student, you can support them in one of the 
-            many ways we have available including a once-off amount or monthly 
+            If you choose a student, you can support them in one of the many
+            ways we have available including a once-off amount or monthly
             recurring donations.
           </strong>
         }
@@ -96,12 +102,12 @@ export default function Home() {
         left="-50px"
         textNode={
           <strong className="bold-text-6">
-            When you join invstED, you can choose between donating to a 
-            specific student or to our Equity Fund. 
+            When you join invstED, you can choose between donating to a specific
+            student or to our Equity Fund.
             <br />
             <br />
-            If you choose a student, you can support them in one of the 
-            many ways we have available including a once-off amount or monthly 
+            If you choose a student, you can support them in one of the many
+            ways we have available including a once-off amount or monthly
             recurring donations.
           </strong>
         }
@@ -116,8 +122,12 @@ export default function Home() {
           <Container className={styles.communityContainer}>
             <NewsLetterSection />
             <div className={styles.communityTextSection}>
-              <p className={styles.communityText}>Be a part of someone&#39;s success</p>
-              <Link href="/" className={styles.link}>Join Now</Link>
+              <p className={styles.communityText}>
+                Be a part of someone&#39;s success
+              </p>
+              <Link href="/" className={styles.link}>
+                Join Now
+              </Link>
             </div>
           </Container>
         </div>

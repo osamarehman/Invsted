@@ -28,6 +28,7 @@
     font-weight: 700;
     line-height: 39px;
     margin-bottom: 24px;
+    font-family: Montserrat, sans-serif;
 }
 
 .description {
@@ -74,4 +75,41 @@
     border: 0;
     padding: 9px 15px;
     display: inline-block;
+    font-family: Montserrat, sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+    .heading {
+        font-size: 25px;
+    }
+    
+    .description {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        max-width: 90%;
+        padding: 30px 20px 20px;
+    }
+    
+    .textSection {
+        width: 100%;
+    }
+
+    .heading {
+        margin-bottom: 10px;
+    }
+
+    .description {
+        line-height: 20px;
+    }
+
+    .formSection {
+        width: 100%;
+        padding-top: 0px;
+    }
 }

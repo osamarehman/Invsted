@@ -23,16 +23,17 @@
     font-size: 32px;
     font-weight: 600;
     line-height: 38px;
+    font-family: Montserrat, sans-serif;
     margin-top: 0;
     color: #fff;
-    width: 24%;
+    width: 100%;
+    max-width: 255px;
 }
 
 .ctaContainer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 26%;
 }
 
 .btn {
@@ -45,6 +46,7 @@
     margin-right: 20px;
     padding: 10px 24px;
     font-weight: 700;
+    font-family: Montserrat, sans-serif;
     max-width: 100%;
     display: inline-block;
     white-space: nowrap;
@@ -56,4 +58,22 @@
 
 .link2 {
     background-color: #69df41;
+}
+
+@media screen and (max-width: 991px) {
+    .flexContainer {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .heading {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .ctaContainer {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px
+    }
 }

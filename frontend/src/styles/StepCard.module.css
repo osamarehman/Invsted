@@ -1,6 +1,5 @@
 
 .cardContainer {
-    max-width: 80%;
     background-color: rgba(0, 0, 0, 0);
     margin-top: 20px;
     margin-bottom: 20px;
@@ -33,6 +32,7 @@
     padding: 8px 25px;
     font-weight: 700;
     width: fit-content;
+    font-family: Montserrat, sans-serif;
 }
 
 .textSection {
@@ -60,6 +60,7 @@
     margin-top: 10px;
     font-weight: 700;
     margin-bottom: 16px;
+    font-family: Montserrat, sans-serif;
 }
 
 .description {
@@ -72,4 +73,10 @@
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .textSection {
+        padding: 36px 15px 20px;
+    }
 }

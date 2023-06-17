@@ -61,6 +61,7 @@
     margin-bottom: 40px;
     font-size: 36px;
     font-weight: 700;
+    font-family: Montserrat, sans-serif;
     line-height: 41px;
 }
 
@@ -74,6 +75,7 @@
     font-weight: 700;
     text-decoration: none;
     transition: box-shadow .2s;
+    font-family: Montserrat, sans-serif;
     position: relative;
     box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0);
     max-width: 100%;
@@ -82,8 +84,22 @@
     white-space: nowrap;
 }
 
+@media screen and (max-width: 991px) {
+    .pricingSection {
+        margin-top: -160px;
+    }
+
+    .gettingStartedSection {
+        padding: 19px;
+    }
+}
+
 @media screen and (max-width: 770px) {
     .pricingSection {
         flex-direction: column;
+    }
+
+    .gettingStartedSection {
+        padding: 25px;
     }
 } 

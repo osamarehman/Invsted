@@ -32,6 +32,7 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 1;
+    font-family: Montserrat, sans-serif;
 }
 
 .description {
@@ -49,6 +50,7 @@
 .subHeading {
     color: #fff;
     font-size: 21px;
+    font-family: Montserrat, sans-serif;
     margin-bottom: 24px;
     line-height: 24px;
 }
@@ -65,11 +67,33 @@
 
 .cardContainer {
     width: 100%;
-    grid-column-gap: 0px;
+    grid-column-gap: 24px;
     grid-row-gap: 24px;
     grid-template-rows: auto auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
     display: grid;
     align-items: end;
+}
+
+@media screen and (max-width: 991px) {
+    .cardContainer {
+        grid-column-gap: 0px;
+    }
+
+    .storyTextContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cardContainer {
+        grid-template-columns: 1fr;
+    }
+
+    /* .storyTextContainer {
+        padding-left: 10px;
+        padding-right: 10px;
+    } */
 }

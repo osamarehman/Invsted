@@ -31,12 +31,14 @@
     margin-bottom: 2px;
     font-size: 13px;
     font-weight: 600;
+    font-family: Montserrat, sans-serif;
 }
 
 .cardHeaderText {
     font-size: 34px;
     font-weight: 700;
     line-height: 40px;
+    font-family: Montserrat, sans-serif;
     text-align: center;
 }
 
@@ -63,6 +65,7 @@
     object-position: 50% 50%;
     background-color: #ffe000;
     border-radius: 10px;
+    font-family: Montserrat, sans-serif;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -72,4 +75,10 @@
     display: flex;
     padding: 9px 15px;
     text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+    .cardSection {
+        width: 100%;
+    }
 }
