@@ -1,17 +1,21 @@
 import styles from "@/styles/Footer.module.css";
-import Link from "next/link";
 import { Container } from "react-bootstrap";
+import CTAContainer from "@/components//Containers/CTAContainer";
+import FooterLeft from "./FooterLeft";
+import FooterRight from "./FooterRight";
 
 export default function Footer() {
-    return (
-        <footer className={styles.footer}>
-            <Container>
-                <p>© {new Date().getFullYear()} Coding in Flow</p>
-                <ul>
-                    <li><Link href="/privacy">Privacy</Link></li>
-                    <li><Link href="/imprint">Imprint</Link></li>
-                </ul>
-            </Container>
-        </footer>
-    );
+  return (
+    <footer className={styles.footer}>
+      <CTAContainer />
+      <section className={styles.mainFooter}>
+        <Container className={styles.container}>
+            <div className={styles.footerRow}>
+            <FooterLeft />
+            <FooterRight />
+            </div>
+        </Container>
+      </section>
+    </footer>
+  );
 }

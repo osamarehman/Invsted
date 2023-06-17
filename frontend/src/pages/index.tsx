@@ -12,6 +12,7 @@ import { Container } from "react-bootstrap";
 import InfoImage1 from "../assets/images/info-image-1.png";
 import InfoImage2 from "../assets/images/info-image-2.png";
 import InfoImage3 from "../assets/images/info-image-3.png";
+import Footer from "@/components/Layout/Footer";
 
 export default function Home() {
   return (
@@ -121,6 +122,7 @@ export default function Home() {
           </Container>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
