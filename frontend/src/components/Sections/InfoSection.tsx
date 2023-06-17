@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
-import { Container } from "react-bootstrap";
 import styles from "@/styles/InfoSection.module.css";
 
 interface IInfoSection {

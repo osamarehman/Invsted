@@ -1,8 +1,8 @@
 import { Container } from "react-bootstrap";
 import styles from "@/styles/StorySection.module.css";
-import IFrameContainer from "./IFrameContainer";
+import IFrameContainer from "@/components/Containers/IFrameContainer";
 import { InvstedStoryLink } from "@/config";
-import StepCard from "./StepCard";
+import StepCard from "@/components/Cards/StepCard";
 
 const StorySection = () => {
   return (

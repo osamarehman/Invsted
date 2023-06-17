@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { User } from "@/models/user";
 import profilePicPlaceholder from "@/assets/images/profile-pic-placeholder.png";
 import * as UsersApi from "@/network/api/users";
-import { AuthModalsContext } from "./auth/AuthModalsProvider";
+import { AuthModalsContext } from "@/components/auth/AuthModalsProvider";
 
 export default function NavBar() {
     const { user } = useAuthenticatedUser();

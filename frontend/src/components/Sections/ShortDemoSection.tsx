@@ -1,7 +1,7 @@
 import { InvstEdShortDemoLink } from "@/config";
 import styles from "@/styles/ShortDemoSection.module.css";
 import { Container } from "react-bootstrap";
-import IFrameContainer from "./IFrameContainer";
+import IFrameContainer from "@/components/Containers/IFrameContainer";
 
 
 const ShortDemoSection = () => {

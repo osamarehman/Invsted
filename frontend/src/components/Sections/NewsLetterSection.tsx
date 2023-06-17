@@ -1,6 +1,6 @@
 import styles from "@/styles/NewsLetterSection.module.css";
 import { Button, Container } from "react-bootstrap";
-import FormInputField from "./form/FormInputField";
+import FormInputField from "@/components/form/FormInputField";
 
 const NewsLetterSection = () => {
   return (
