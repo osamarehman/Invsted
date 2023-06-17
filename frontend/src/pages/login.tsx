@@ -3,11 +3,16 @@ import { Button, Container, Form } from "react-bootstrap";
 import FormInputField from "@/components/form/FormInputField";
 import styles from "@/styles/AuthenticationForm.module.css";
 import FormContainer from "@/components/Containers/FormContainer";
+import Link from "next/link";
+import SocialLoginSection from "@/components/Sections/SocialLoginSection";
 
 export default function Login() {
   return (
     <Layout>
-      <FormContainer headerText="Welcome back" descriptionText="Sign in using your credentials">
+      <FormContainer
+        headerText="Welcome back"
+        descriptionText="Sign in using your credentials"
+      >
         <FormInputField
           register={{
             name: "Email",
@@ -36,7 +41,15 @@ export default function Login() {
           placeholder="Password"
           className={styles.formInput}
         />
-        <Button className={styles.submitBtn}>Sign Up</Button>
+        <Link href={"/"} className={styles.forgetPwdLink}>
+          Forgot Password?
+        </Link>
+        <Button className={styles.submitBtn}>Login</Button>
+        <SocialLoginSection
+          text="Need an account?"
+          linkText="Sign Up"
+          href="/signup"
+        />
       </FormContainer>
     </Layout>
   );

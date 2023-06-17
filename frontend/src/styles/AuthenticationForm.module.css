@@ -111,3 +111,16 @@
     margin-bottom: 0px;
     text-align: left;
 }
+
+.forgetPwdLink {
+    opacity: .75;
+    color: #31c1ff;
+    justify-content: flex-start;
+    margin-top: 6px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+}

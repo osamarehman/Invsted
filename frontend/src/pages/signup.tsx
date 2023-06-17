@@ -4,6 +4,7 @@ import FormInputField from "@/components/form/FormInputField";
 import FormSelectField from "@/components/form/FormSelectField";
 import styles from "@/styles/AuthenticationForm.module.css";
 import FormContainer from "@/components/Containers/FormContainer";
+import SocialLoginSection from "@/components/Sections/SocialLoginSection";
 
 export default function Signup() {
   return (
@@ -73,6 +74,11 @@ export default function Signup() {
           labelClass={styles.formLabel}
         />
         <Button className={styles.submitBtn}>Sign Up</Button>
+        <SocialLoginSection
+          text="Already have an account?"
+          linkText="Login Here"
+          href="/login"
+        />
       </FormContainer>
     </Layout>
   );

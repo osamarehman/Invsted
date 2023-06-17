@@ -1,12 +1,13 @@
 import { useRouter } from "next/router";
 import { Button } from "react-bootstrap";
-import { FcGoogle } from "react-icons/fc";
+import LinkedInIcon from "@/assets/images/linkedin-icon-blue.svg";
+import Image from "next/image";
 
-interface IGoogleSignInButton {
-  className?: string;
+interface ILinkedInSignInButton {
+    className?: string
 }
 
-export default function GoogleSignInButton({ className }: IGoogleSignInButton) {
+export default function LinkedInSignInButton({className}: ILinkedInSignInButton) {
   const router = useRouter();
 
   return (
@@ -19,8 +20,8 @@ export default function GoogleSignInButton({ className }: IGoogleSignInButton) {
       variant="light"
       className={`d-flex align-items-center justify-content-center gap-1 ${className}`}
     >
-      <FcGoogle size={20} />
-      &nbsp;&nbsp;Sign in with Google
+      <Image src={LinkedInIcon} alt="linkedin-icon" />
+      &nbsp;&nbsp;Sign in with LinkedIn
     </Button>
   );
 }
