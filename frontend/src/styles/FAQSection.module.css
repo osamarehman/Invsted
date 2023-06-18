@@ -1,4 +1,3 @@
-
 .faqHeaderSection {
     background-image: url("../assets/images/community-section-bg-image.png");
     background-position: 50%;
@@ -52,12 +51,117 @@
     -webkit-text-stroke-color: #69df41;
 }
 
-.subText > strong {
+.subText>strong {
     color: #69df41;
+}
+
+.blue {
+    color: #31c1ff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.green {
+    color: #69df41;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.yellow {
+    color: #ffe000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.blue-bg {
+    background-color: #31c1ff;
+}
+
+.green-bg {
+    background-color: #69df41;
+}
+
+.yellow-bg {
+    background-color: #ffe000;
+}
+
+.white-bg {
+    background-color: #fff;
+}
+
+.faqSection {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 60px 3%;
+}
+
+.faqContainer {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    color: #fff;
+    border-color: rgba(97, 114, 131, 0);
+    border-radius: 6px;
+    min-height: 52px;
+    border: 1px solid rgba(97, 114, 131, .2);
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 16px;
+    display: flex;
+    padding: 9px 45px;
+    max-width: 100%;
+    font-weight: 700;
+    color: #000;
+}
+
+.containerStyle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.headerStyle {
+    padding: 30px 15px 30px 20px !important;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, .04) !important;
+}
+
+.bodyStyle {
+    font-size: 18px !important;
+    font-weight: 400;
+}
+
+.faqs {
+    padding: 20px;
 }
 
 @media screen and (max-width: 479px) {
     .heading {
         font-size: 40px;
+    }
+
+    .yellow {
+        font-size: 14px !important;
+    }
+
+    .green {
+        font-size: 14px !important;
+    }
+
+    .blue {
+        font-size: 14px !important;
     }
 }

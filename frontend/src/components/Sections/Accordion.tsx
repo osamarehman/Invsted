@@ -13,9 +13,12 @@ interface IItem {
 interface IAccordion {
   items: IItem[];
   titleStyle?: string;
+  containerStyle?: string;
+  headerStyle?: string;
+  bodyStyle?: string;
 }
 
-const Accordion = ({ items, titleStyle }: IAccordion) => {
+const Accordion = ({ items, titleStyle, containerStyle, headerStyle, bodyStyle }: IAccordion) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -25,12 +28,12 @@ const Accordion = ({ items, titleStyle }: IAccordion) => {
   return (
     <div className={styles.faqContainer}>
       {items.map((item: IItem, _idx: number) => (
-        <Card key={item.id} className={styles.cardContainer}>
-          <Card.Header onClick={handleToggle} className={styles.headerSection}>
+        <Card key={item.id} className={`${styles.cardContainer} ${containerStyle}`}>
+          <Card.Header onClick={handleToggle} className={`${styles.headerSection} ${headerStyle}`}>
             <p className={`${styles.title} ${titleStyle}`}>{item.title}</p>
             <Image alt={"Toggle Icon"} style={{ transform: `rotate(${isOpen ? "45deg" : "0deg"})` }} className={styles.image} src={PlusIcon} />
           </Card.Header>
-          { isOpen && <Card.Body className={styles.body}>{item.content}</Card.Body>}
+          { isOpen && <Card.Body className={`${styles.body} ${bodyStyle}`}>{item.content}</Card.Body>}
         </Card>
       ))}
     </div>
