@@ -1,39 +1,27 @@
-import Image from "next/image";
-import { Card, Container } from "react-bootstrap";
-import PlusIcon from "@/assets/images/plus-icon.svg";
 import styles from "@/styles/FAQSection.module.css";
-import { useState } from "react";
+import { Container } from "react-bootstrap";
 
-interface IItem {
-  id: string;
-  title: string;
-  content: string | JSX.Element;
-}
-
-interface IFAQSection {
-  items: IItem[];
-  titleStyle?: string;
-}
-
-const FAQSection = ({ items, titleStyle }: IFAQSection) => {
-
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleToggle = () => {
-        setIsOpen((prev) => !prev)
-    }
+const FAQSection = () => {
   return (
-    <div className={styles.faqContainer}>
-      {items.map((item: IItem, _idx: number) => (
-        <Card key={item.id} className={styles.cardContainer}>
-          <Card.Header onClick={handleToggle} className={styles.headerSection}>
-            <p className={`${styles.title} ${titleStyle}`}>{item.title}</p>
-            <Image alt={"Toggle Icon"} style={{ transform: `rotate(${isOpen ? "45deg" : "0deg"})` }} className={styles.image} src={PlusIcon} />
-          </Card.Header>
-          { isOpen && <Card.Body className={styles.body}>{item.content}</Card.Body>}
-        </Card>
-      ))}
-    </div>
+    <>
+      <section id="FAQ-header" className={styles.faqHeaderSection}>
+        <Container className={styles.faqHeaderContainer}>
+          <div className={styles.textContainer}>
+            <h1 className={styles.heading}>
+              Frequently Asked<br />
+              <span className={styles.subText}>
+                <strong>Questions</strong>
+              </span>
+            </h1>
+          </div>
+        </Container>
+      </section>
+      <section id="faq-section" className={styles.faqSection} >
+        <Container className={styles.faqContainer} >
+
+        </Container>
+      </section>
+    </>
   );
 };
 

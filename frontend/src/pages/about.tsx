@@ -7,9 +7,11 @@ import GeneralCard from "@/components/Cards/GeneralCard";
 import { Container } from "react-bootstrap";
 import TeamImage1 from "@/assets/images/Brianna-Goodlin.png";
 import TeamImage2 from "@/assets/images/Jenna-Hertz.png";
-import FAQSection from "@/components/Sections/FAQSection";
+import Accordion from "@/components/Sections/Accordion";
 import Link from "next/link";
 import StorySection from "@/components/Sections/StorySection";
+import ValueSection from "@/components/Sections/ValueSection";
+import FAQSection from "@/components/Sections/FAQSection";
 
 export default function About() {
   return (
@@ -34,7 +36,6 @@ export default function About() {
         textSectionStyles={styles.textSectionStyles}
         imageStyle={styles.imageStyle}
       />
-      {/* <GeneralCard /> */}
       <section id="team-section" className={styles.teamSection}>
         <Container className={styles.teamContainer}>
           <div className={styles.teamTextSection}>
@@ -49,7 +50,7 @@ export default function About() {
               cardShortDescription="CEO & Founder"
               cardImage={TeamImage1}
               cardMainBody={
-                <FAQSection
+                <Accordion
                   titleStyle={styles.yellow}
                   items={[
                     {
@@ -57,7 +58,7 @@ export default function About() {
                       title: "Learn More",
                       content: (
                         <div>
-                          <p className={styles.lightWeight} >
+                          <p className={styles.lightWeight}>
                             Brianna has spent her life navigating privileged
                             spaces with a low-income background. She has worked
                             at innovation and growth strategy consulting firms
@@ -91,7 +92,7 @@ export default function About() {
               cardImage={TeamImage2}
               titleStyle={styles.green}
               cardMainBody={
-                <FAQSection
+                <Accordion
                   titleStyle={styles.green}
                   items={[
                     {
@@ -99,7 +100,7 @@ export default function About() {
                       title: "Learn More",
                       content: (
                         <div>
-                          <p className={styles.lightWeight} >
+                          <p className={styles.lightWeight}>
                             Jenna is a qualified Chartered Accountant (CA (SA))
                             from South Africa. Jenna has worked as an associate
                             lecturer at Witwatersrand University while pursuing
@@ -131,7 +132,24 @@ export default function About() {
           </div>
         </Container>
       </section>
+      <section id="value-section" className={styles.teamSection}>
+        <div className={styles.separator}></div>
+        <Container>
+          <div className={`${styles.teamTextSection} ${styles.valueSection}`}>
+            <h3 className={`${styles.teamHeading} ${styles.valueSectionHeading}`}>Our values</h3>
+            <p className={styles.teamDescription}>
+              Our values are core to who we are as individuals, and why we
+              started invstED. They are at the heart of our company, and
+              underpin the work we do, and the impact we strive for. While we
+              may not always fully live up to them, they are what guide us, and
+              keep us on track.
+            </p>
+          </div>
+          <ValueSection />
+        </Container>
+      </section>
       <StorySection maxWidth={824} />
+      <FAQSection />
     </Layout>
   );
 }
