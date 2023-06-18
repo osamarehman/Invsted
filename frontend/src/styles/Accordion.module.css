@@ -31,4 +31,6 @@
     font-weight: 600;
 }
 
-.body {}
+.body {
+    white-space: pre-line;
+}
