@@ -15,6 +15,8 @@ interface IInfoSection {
   backgroundColor: string;
   titleColor: "#000" | string;
   isStats?: boolean;
+  containerMAXWidth?: string,
+  textSectionStyles?: string
 }
 
 const InfoSection = ({
@@ -30,12 +32,14 @@ const InfoSection = ({
   titleColor,
   isStats = false,
   statSRC,
+  containerMAXWidth = "800px",
+  textSectionStyles = "",
 }: IInfoSection) => {
   return (
     <section className={styles.infoSection}>
       <div
         className={styles.container}
-        style={{ justifyContent, backgroundColor }}
+        style={{ justifyContent, backgroundColor, maxWidth: containerMAXWidth }}
       >
         <Image
           src={src}
@@ -54,7 +58,7 @@ const InfoSection = ({
           <></>
         )}
         <div></div>
-        <div className={styles.textSection}>
+        <div className={`${styles.textSection} ${textSectionStyles}`} >
           <div className={styles.sectionWrapper}></div>
           <div className={styles.textContainer}>
             <h3 className={styles.title} style={{ color: titleColor }}>
