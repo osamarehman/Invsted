@@ -2,7 +2,7 @@ import styles from "@/styles/IFrameContainer.module.css";
 
 interface IIFrameContainer {
     IframeSrc: string,
-    maxWidth?: "unset" | number
+    maxWidth?: "unset" | number | string
 }
 
 const IFrameContainer = ({ IframeSrc, maxWidth = 824 }: IIFrameContainer) => {

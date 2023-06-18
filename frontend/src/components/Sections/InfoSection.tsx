@@ -15,8 +15,10 @@ interface IInfoSection {
   backgroundColor: string;
   titleColor: "#000" | string;
   isStats?: boolean;
-  containerMAXWidth?: string,
-  textSectionStyles?: string
+  containerStyle?: string,
+  textSectionStyles?: string,
+  imageStyle?: string,
+  sectionStyle?: string,
 }
 
 const InfoSection = ({
@@ -32,19 +34,21 @@ const InfoSection = ({
   titleColor,
   isStats = false,
   statSRC,
-  containerMAXWidth = "800px",
+  containerStyle = "",
   textSectionStyles = "",
+  imageStyle = "",
+  sectionStyle = ""
 }: IInfoSection) => {
   return (
-    <section className={styles.infoSection}>
+    <section className={`${styles.infoSection} ${sectionStyle}`}>
       <div
-        className={styles.container}
-        style={{ justifyContent, backgroundColor, maxWidth: containerMAXWidth }}
+        className={`${styles.container} ${containerStyle}`}
+        style={{ justifyContent, backgroundColor }}
       >
         <Image
           src={src}
           alt="info-section-image"
-          className={styles.infoImg}
+          className={`${styles.infoImg} ${imageStyle}`}
           style={{ top, left, right, bottom }}
         />
         {isStats ? (

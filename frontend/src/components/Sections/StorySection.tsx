@@ -4,7 +4,11 @@ import IFrameContainer from "@/components/Containers/IFrameContainer";
 import { InvstedStoryLink } from "@/config";
 import StepCard from "@/components/Cards/StepCard";
 
-const StorySection = () => {
+interface IStorySection {
+  maxWidth?: "unset" | number
+}
+
+const StorySection = ({maxWidth = "unset"}:IStorySection) => {
   return (
     <section id="story-section" className={styles.storySection}>
       <Container className={styles.storyContainer}>
@@ -15,7 +19,7 @@ const StorySection = () => {
             created invstED
           </p>
         </div>
-        <IFrameContainer IframeSrc={InvstedStoryLink} maxWidth="unset" />
+        <IFrameContainer IframeSrc={InvstedStoryLink} maxWidth={maxWidth} />
         <div className={styles.storyTextContainer}>
           <div className={styles.textSection} style={{ marginTop: 40 }}>
             <h3 className={styles.mainHeading}>Our Story</h3>
