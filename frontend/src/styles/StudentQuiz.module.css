@@ -1,0 +1,96 @@
+
+.headerSection {
+    background-color: #eee;
+    background-image: linear-gradient(86deg, #eee 39%, rgba(238, 238, 238, .2)), url("../assets/images/student-quiz-bg.png");
+    background-position: 0 0, 100%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, auto 700px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.headerContainer {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 50px;
+}
+
+.textSection {
+    width: 45%;
+}
+
+.heading {
+    margin-top: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 46px;
+    font-weight: 600;
+    line-height: 39px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+}
+
+.description {
+    font-family: Questrial, sans-serif;
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+.link {
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #ffe000;
+    border-radius: 3px;
+    margin-top: 20px;
+    padding: 9px 25px;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background-color .2s, background-position .2s, color .2s, border .2s, box-shadow .2s;
+    line-height: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+    .textSection {
+        width: 55%;
+    }
+
+    .headerSection {
+        padding: 25px;
+    }
+
+    .heading {
+        margin-bottom: 10px;
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 491px) {
+    .textSection {
+        width: 90%;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .headerSection {
+        background-image: linear-gradient(86deg, #eee 39%, rgba(238, 238, 238, .8)), url("../assets/images/quiz-section-bg-2.jpg");
+        background-position: 0 0, 50%;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+    }
+
+    .headerContainer {
+        padding: 0px 10px;
+    }
+}

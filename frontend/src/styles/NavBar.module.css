@@ -54,3 +54,9 @@
 .navBtnLink {
     padding: 0px;
 }
+
+@media screen and (max-width: 491px) {
+    .logoImg {
+        width: 40vw;
+    }
+}
