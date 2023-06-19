@@ -19,7 +19,7 @@ export default function FormInputField({
   infoMsgElement,
   labelClass,
   ...props
-}: FormInputFieldProps & FormControlProps & ComponentProps<"input">) {
+}: FormInputFieldProps & FormControlProps & ComponentProps<"input" | "textarea">) {
   return (
     <Form.Group className="mb-3" controlId={register.name + "-input"}>
       {label && <Form.Label className={labelClass}>{label}</Form.Label>}

@@ -100,6 +100,48 @@
     margin-top: 0px;
 }
 
+.questions {
+    margin-top: 80px;
+    margin-bottom: 0;
+}
+
+.formLabel {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.33333;
+    color: #222525;
+}
+
+.formInput {
+    border-radius: 3px;
+    margin-bottom: 48px;
+    width: 100%;
+    /* height: 38px; */
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    display: block;
+}
+
+.submitBtn {
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: #ffe000;
+    border-radius: 3px;
+    /* margin-top: 20px; */
+    padding: 15px 25px;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background-color .2s, background-position .2s, color .2s, border .2s, box-shadow .2s;
+}
+
 @media screen and (max-width: 767px) {
     .textSection {
         width: 55%;
