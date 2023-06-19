@@ -1,5 +1,5 @@
-import Footer from "@/components/Footer";
-import NavBar from "@/components/NavBar";
+import Footer from "@/components/Layout/Footer";
+import NavBar from "@/components/Layout/NavBar";
 import AuthModalsProvider from "@/components/auth/AuthModalsProvider";
 import useAuthenticatedUser from "@/hooks/useAuthenticatedUser";
 import styles from "@/styles/App.module.css";
@@ -35,12 +35,13 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-
-      <div>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </div>
+      <SSRProvider>
+        <div>
+          <main>
+            <Component {...pageProps} />
+          </main>
+        </div>
+      </SSRProvider>
     </>
   );
 }

@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { User } from "@/models/user";
 import profilePicPlaceholder from "@/assets/images/profile-pic-placeholder.png";
 import * as UsersApi from "@/network/api/users";
-import { AuthModalsContext } from "./auth/AuthModalsProvider";
+import { AuthModalsContext } from "@/components/auth/AuthModalsProvider";
 
 export default function NavBar() {
     const { user } = useAuthenticatedUser();
@@ -101,9 +101,11 @@ function LoggedOutView() {
             <Nav.Link as={Link} href="/login" className={`${styles.navLinks}`}>
                 Login
             </Nav.Link>
-            <Button className={`${styles.navBtn}`}>
-                Learn More
-            </Button>
+            <Nav.Link as={Link} href="/about" className={styles.navBtnLink}>
+                <Button className={`${styles.navBtn}`}>
+                    Learn More
+                </Button>
+            </Nav.Link>
         </Nav>
     );
 }

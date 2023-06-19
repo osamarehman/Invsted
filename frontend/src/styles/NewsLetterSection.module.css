@@ -1,0 +1,115 @@
+
+.container {
+    background-color: #fff;
+    height: 225px;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -235px;
+    margin-bottom: 110px;
+    padding: 40px 40px 60px;
+}
+
+.textSection {
+    padding-right: 20px;
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+}
+
+.heading {
+    color: #31c1ff;
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-bottom: 24px;
+    font-family: Montserrat, sans-serif;
+}
+
+.description {
+    opacity: .6;
+    color: #000;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.formSection {
+    padding-top: 20px;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+}
+
+.formElement {
+    height: 60px;
+    float: left;
+    border: 3px solid #ecebea;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    display: block;
+}
+
+.btn {
+    height: 60px;
+    color: #000;
+    text-transform: uppercase;
+    background-color: #69df41;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 9px;
+    padding-right: 9px;
+    font-weight: 700;
+    border: 0;
+    padding: 9px 15px;
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+    .heading {
+        font-size: 25px;
+    }
+    
+    .description {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        max-width: 90%;
+        padding: 30px 20px 20px;
+    }
+    
+    .textSection {
+        width: 100%;
+    }
+
+    .heading {
+        margin-bottom: 10px;
+    }
+
+    .description {
+        line-height: 20px;
+    }
+
+    .formSection {
+        width: 100%;
+        padding-top: 0px;
+    }
+}

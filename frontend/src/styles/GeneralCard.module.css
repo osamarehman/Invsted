@@ -1,0 +1,50 @@
+
+.cardContainer {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .2);
+    border: none;
+    max-width: 450px;
+}
+
+.cardImage {
+    max-width: 450px;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cardBody {
+    text-align: center;
+}
+
+.cardTitle {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.cardDescription {
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 20px;
+}
+
+.cardMainBody {}
+
+.cardFooter {}
+
+@media screen and (max-width:991px) {
+    .cardImage {
+        max-width: 350px;
+    }    
+}
