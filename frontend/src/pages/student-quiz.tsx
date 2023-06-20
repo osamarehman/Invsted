@@ -7,6 +7,9 @@ import InvstedBackground from "@/assets/images/invsted-bg-img.png";
 import InvstedLogo from "@/assets/images/invsted-logo.png";
 import Image from "next/image";
 import FormInputField from "@/components/form/FormInputField";
+import FormCheckboxField from "@/components/form/FormCheckboxField";
+import GridContainer from "@/components/Containers/GridContainer";
+import { identityTags, interestTags, passionTags } from "@/config/formFieldConfig";
 
 export default function StudentQuiz() {
   return (
@@ -90,6 +93,21 @@ export default function StudentQuiz() {
             labelClass={styles.formLabel}
             className={styles.formInput}
           />
+          <label className={styles.formLabel}>Upload your profile picture *</label>
+          {/* <FormInputField
+            register={{
+              name: "university",
+              required: true,
+              onChange: async (e) => console.log(e.target.value),
+              onBlur: async (e) => console.log(e.target.value),
+              ref: () => {},
+            }}
+            type="file"
+            label="What is your university? *"
+            placeholder="e.g. Harvard"
+            labelClass={styles.formLabel}
+            className={styles.formInput}
+          /> */}
           <FormInputField
             register={{
               name: "email",
@@ -132,6 +150,61 @@ export default function StudentQuiz() {
             labelClass={styles.formLabel}
             className={styles.formInput}
           />
+          <label className={styles.formLabel} >Which tags would you choose to describe your identity? *</label>
+          <label className={`${styles.formLabel} ${styles.subLabel}`} >These tags are used to match you with investors</label>
+          <GridContainer>
+            { identityTags.map((identity) => (
+              <FormCheckboxField
+                key={identity.label}
+                register={{
+                  name: identity.label,
+                  required: true,
+                  onChange: async (e) => console.log(e.target.value),
+                  onBlur: async (e) => console.log(e.target.value),
+                  ref: () => {},
+                }}
+                label={identity.label}
+                labelClass={styles.formLabel}
+                className={styles.checkInput}
+              />
+            )) }
+          </GridContainer>
+          <label className={styles.formLabel} >Which tags represent your interests? *</label>
+          <GridContainer>
+            { interestTags.map((identity) => (
+              <FormCheckboxField
+                key={identity.label}
+                register={{
+                  name: identity.label,
+                  required: true,
+                  onChange: async (e) => console.log(e.target.value),
+                  onBlur: async (e) => console.log(e.target.value),
+                  ref: () => {},
+                }}
+                label={identity.label}
+                labelClass={styles.formLabel}
+                className={styles.checkInput}
+              />
+            )) }
+          </GridContainer>
+          <label className={styles.formLabel} >Which tags represent your passions? *</label>
+          <GridContainer>
+            { passionTags.map((identity) => (
+              <FormCheckboxField
+                key={identity.label}
+                register={{
+                  name: identity.label,
+                  required: true,
+                  onChange: async (e) => console.log(e.target.value),
+                  onBlur: async (e) => console.log(e.target.value),
+                  ref: () => {},
+                }}
+                label={identity.label}
+                labelClass={styles.formLabel}
+                className={styles.checkInput}
+              />
+            )) }
+          </GridContainer>
           <FormInputField
             register={{
               name: "personalInfo",
@@ -297,6 +370,18 @@ export default function StudentQuiz() {
             labelClass={styles.formLabel}
             className={styles.formInput}
           />
+          <label className={styles.formLabel} >Do you accept our Terms & Conditions? *</label>
+          <FormCheckboxField
+                register={{
+                  name: "terms",
+                  required: true,
+                  onChange: async (e) => console.log(e.target.value),
+                  onBlur: async (e) => console.log(e.target.value),
+                  ref: () => {},
+                }}
+                labelClass={styles.formLabel}
+                className={styles.checkInput}
+              />
           <Button className={styles.submitBtn}>Submit</Button>
         </div>
       </QuizContainer>
