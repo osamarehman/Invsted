@@ -146,9 +146,9 @@
     transition: background-color .2s, background-position .2s, color .2s, border .2s, box-shadow .2s;
 }
 
-.checkInput {
+/* .checkInput {
 
-}
+} */
 
 @media screen and (max-width: 767px) {
     .textSection {

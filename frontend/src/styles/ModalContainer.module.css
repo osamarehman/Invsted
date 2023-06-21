@@ -1,0 +1,29 @@
+.modalContainer {
+    padding: 30px;
+}
+
+.modalContainer>div>div {
+    background-color: #fff;
+    color: #000;
+}
+
+.modalHeader {
+    color: #000;
+    border: none;
+}
+
+.closeBtn {
+    margin-left: auto;
+    background-color: #fff;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.modalTitle {}
+
+.modalBody {}
+
+.modalFooter {
+    border: none;
+}

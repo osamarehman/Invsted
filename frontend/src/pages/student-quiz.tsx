@@ -9,9 +9,26 @@ import Image from "next/image";
 import FormInputField from "@/components/form/FormInputField";
 import FormCheckboxField from "@/components/form/FormCheckboxField";
 import GridContainer from "@/components/Containers/GridContainer";
-import { identityTags, interestTags, passionTags } from "@/config/formFieldConfig";
+import {
+  identityTags,
+  interestTags,
+  passionTags,
+} from "@/config/formFieldConfig";
+import UploadFileBtn from "@/components/form/UploadFileBtn";
+import { useState, useRef, useEffect } from "react";
+import ModalContainer from "@/components/Containers/ModalContainer";
+import { createPortal } from "react-dom";
 
 export default function StudentQuiz() {
+  const [showModal, setShowModal] = useState(false);
+  const ref = useRef<Element | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    ref.current = document.querySelector<HTMLElement>("#portal");
+    setMounted(true);
+  }, []);
+
   return (
     <Layout>
       <section id="quiz-header" className={styles.headerSection}>
@@ -93,21 +110,10 @@ export default function StudentQuiz() {
             labelClass={styles.formLabel}
             className={styles.formInput}
           />
-          <label className={styles.formLabel}>Upload your profile picture *</label>
-          {/* <FormInputField
-            register={{
-              name: "university",
-              required: true,
-              onChange: async (e) => console.log(e.target.value),
-              onBlur: async (e) => console.log(e.target.value),
-              ref: () => {},
-            }}
-            type="file"
-            label="What is your university? *"
-            placeholder="e.g. Harvard"
-            labelClass={styles.formLabel}
-            className={styles.formInput}
-          /> */}
+          <label className={styles.formLabel}>
+            Upload your profile picture *
+          </label>
+          <UploadFileBtn onClick={() => setShowModal(true)} />
           <FormInputField
             register={{
               name: "email",
@@ -150,10 +156,14 @@ export default function StudentQuiz() {
             labelClass={styles.formLabel}
             className={styles.formInput}
           />
-          <label className={styles.formLabel} >Which tags would you choose to describe your identity? *</label>
-          <label className={`${styles.formLabel} ${styles.subLabel}`} >These tags are used to match you with investors</label>
+          <label className={styles.formLabel}>
+            Which tags would you choose to describe your identity? *
+          </label>
+          <label className={`${styles.formLabel} ${styles.subLabel}`}>
+            These tags are used to match you with investors
+          </label>
           <GridContainer>
-            { identityTags.map((identity) => (
+            {identityTags.map((identity) => (
               <FormCheckboxField
                 key={identity.label}
                 register={{
@@ -167,11 +177,13 @@ export default function StudentQuiz() {
                 labelClass={styles.formLabel}
                 className={styles.checkInput}
               />
-            )) }
+            ))}
           </GridContainer>
-          <label className={styles.formLabel} >Which tags represent your interests? *</label>
+          <label className={styles.formLabel}>
+            Which tags represent your interests? *
+          </label>
           <GridContainer>
-            { interestTags.map((identity) => (
+            {interestTags.map((identity) => (
               <FormCheckboxField
                 key={identity.label}
                 register={{
@@ -185,11 +197,13 @@ export default function StudentQuiz() {
                 labelClass={styles.formLabel}
                 className={styles.checkInput}
               />
-            )) }
+            ))}
           </GridContainer>
-          <label className={styles.formLabel} >Which tags represent your passions? *</label>
+          <label className={styles.formLabel}>
+            Which tags represent your passions? *
+          </label>
           <GridContainer>
-            { passionTags.map((identity) => (
+            {passionTags.map((identity) => (
               <FormCheckboxField
                 key={identity.label}
                 register={{
@@ -203,7 +217,7 @@ export default function StudentQuiz() {
                 labelClass={styles.formLabel}
                 className={styles.checkInput}
               />
-            )) }
+            ))}
           </GridContainer>
           <FormInputField
             register={{
@@ -370,21 +384,32 @@ export default function StudentQuiz() {
             labelClass={styles.formLabel}
             className={styles.formInput}
           />
-          <label className={styles.formLabel} >Do you accept our Terms & Conditions? *</label>
+          <label className={styles.formLabel}>
+            Do you accept our Terms & Conditions? *
+          </label>
           <FormCheckboxField
-                register={{
-                  name: "terms",
-                  required: true,
-                  onChange: async (e) => console.log(e.target.value),
-                  onBlur: async (e) => console.log(e.target.value),
-                  ref: () => {},
-                }}
-                labelClass={styles.formLabel}
-                className={styles.checkInput}
-              />
+            register={{
+              name: "terms",
+              required: true,
+              onChange: async (e) => console.log(e.target.value),
+              onBlur: async (e) => console.log(e.target.value),
+              ref: () => {},
+            }}
+            labelClass={styles.formLabel}
+            className={styles.checkInput}
+          />
           <Button className={styles.submitBtn}>Submit</Button>
         </div>
       </QuizContainer>
+      {mounted &&
+        ref?.current &&
+        createPortal(
+          <ModalContainer
+            show={showModal}
+            handleClose={() => setShowModal(false)}
+          />,
+          ref.current
+        )}
     </Layout>
   );
 }

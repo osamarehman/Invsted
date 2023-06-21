@@ -1,0 +1,26 @@
+
+.uploadContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+    gap: 9px;
+}
+
+.uploadIcon {
+    height: auto;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.uploadBtn {
+    width: 100%;
+    min-width: 150px;
+    background: #ffe000;
+    padding: 8px;
+    color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(1, 204, 190, .15);
+    border-radius: 40px;
+    cursor: pointer;
+}
