@@ -9,6 +9,8 @@ interface FormInputFieldProps {
   inputGroupElement?: JSX.Element;
   labelClass?: string;
   infoMsgElement?: JSX.Element
+  subLabel?: string,
+  subLabelClass?: string,
 }
 
 export default function FormInputField({
@@ -18,11 +20,14 @@ export default function FormInputField({
   inputGroupElement,
   infoMsgElement,
   labelClass,
+  subLabel,
+  subLabelClass,
   ...props
 }: FormInputFieldProps & FormControlProps & ComponentProps<"input" | "textarea">) {
   return (
     <Form.Group className="mb-3" controlId={register.name + "-input"}>
       {label && <Form.Label className={labelClass}>{label}</Form.Label>}
+      {subLabel && <Form.Label className={subLabelClass}>{subLabel}</Form.Label>}
       <InputGroup hasValidation>
         <Form.Control
           {...register}

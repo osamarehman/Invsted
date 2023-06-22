@@ -1,5 +1,12 @@
 .modalContainer {
     padding: 30px;
+    overflow-y: hidden;
+}
+
+.modalContainer >div {
+    max-width: 1050px;
+    width: calc(100% - 60px);
+    height: 100%;
 }
 
 .modalContainer>div>div {
@@ -20,10 +27,20 @@
     font-size: 20px;
 }
 
+.fileName {
+    margin-bottom: 0px;
+}
+
 .modalTitle {}
 
-.modalBody {}
+.modalBody {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .modalFooter {
     border: none;
+    padding: 16px;
+    min-height: 50px;
 }

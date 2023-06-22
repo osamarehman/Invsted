@@ -29,6 +29,7 @@ export default function FormCheckboxField({
         <Form.Check
           type={type}
           label={label}
+          {...props}
         />
         {inputGroupElement}
         <Form.Control.Feedback type="invalid">

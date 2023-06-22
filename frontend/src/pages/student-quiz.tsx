@@ -15,7 +15,7 @@ import {
   passionTags,
 } from "@/config/formFieldConfig";
 import UploadFileBtn from "@/components/form/UploadFileBtn";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, ChangeEvent } from "react";
 import ModalContainer from "@/components/Containers/ModalContainer";
 import { createPortal } from "react-dom";
 
@@ -23,11 +23,24 @@ export default function StudentQuiz() {
   const [showModal, setShowModal] = useState(false);
   const ref = useRef<Element | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [file, setFile] = useState("");
 
   useEffect(() => {
     ref.current = document.querySelector<HTMLElement>("#portal");
     setMounted(true);
   }, []);
+
+  const handleFileInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setShowModal(false);
+
+    const input = event.target as HTMLInputElement;
+    if (!input.files?.length) {
+      return;
+    }
+
+    const file = input.files[0];
+    setFile(file?.name)
+  };
 
   return (
     <Layout>
@@ -113,7 +126,7 @@ export default function StudentQuiz() {
           <label className={styles.formLabel}>
             Upload your profile picture *
           </label>
-          <UploadFileBtn onClick={() => setShowModal(true)} />
+          <UploadFileBtn file={file} onClick={() => setShowModal(true)} />
           <FormInputField
             register={{
               name: "email",
@@ -407,6 +420,27 @@ export default function StudentQuiz() {
           <ModalContainer
             show={showModal}
             handleClose={() => setShowModal(false)}
+            modalBody={
+              <div className={styles.modalBody}>
+                <h1 className={styles.fileUploadTitle}>
+                  drag & drop <br />
+                  any files
+                </h1>
+                <p className={styles.fileUploadText}>or</p>
+                <label
+                  htmlFor="file-upload-btn"
+                  className={styles.fileUploadBtn}
+                >
+                  Choose a local file
+                </label>
+                <input
+                  onChange={handleFileInput}
+                  type={"file"}
+                  id="file-upload-btn"
+                  className={styles.fileTypeInput}
+                />
+              </div>
+            }
           />,
           ref.current
         )}

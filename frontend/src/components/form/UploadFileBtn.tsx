@@ -5,9 +5,10 @@ import { Button } from "react-bootstrap";
 
 interface IUploadFileBtn {
   onClick: () => void;
+  file?: string;
 }
 
-const UploadFileBtn = ({ onClick }: IUploadFileBtn) => {
+const UploadFileBtn = ({ onClick, file }: IUploadFileBtn) => {
   return (
     <div className={styles.uploadContainer}>
       <Image
@@ -16,9 +17,13 @@ const UploadFileBtn = ({ onClick }: IUploadFileBtn) => {
         width={25}
         alt="Upload file icon"
       />
-      <Button onClick={onClick} className={styles.uploadBtn}>
-        Choose a file
-      </Button>
+      {file ? (
+        <p className={styles.fileName}>{file}</p>
+      ) : (
+        <Button onClick={onClick} className={styles.uploadBtn}>
+          Choose a file
+        </Button>
+      )}
     </div>
   );
 };
