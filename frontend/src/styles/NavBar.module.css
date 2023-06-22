@@ -55,8 +55,79 @@
     padding: 0px;
 }
 
+.studentProfileSection {
+    width: 100vw;
+}
+
+.studentProfileContainer {
+    width: 100%;
+    max-width: 940px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customLink {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 0px;
+    margin-top: 15px;
+}
+
+.cartBtn {
+    background-color: #31c1ff;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 9px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border: none;
+}
+
+.cartBtn > .cartText {
+    display: block;
+    font-weight: 700;
+}
+
+.cartBtn > .cartIemCount {
+    display: block;
+    background-color: #fff;
+    color: #31c1ff;
+    border-radius: 50%;
+    max-width: 18px;
+    width: 100%;
+    font-size: 11px;
+    height: 18px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+    .customLink {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 491px) {
     .logoImg {
         width: 40vw;
+    }
+
+    .cartBtn {
+        gap: 5px;
     }
 }

@@ -1,0 +1,96 @@
+
+.profileSection {
+    width: 100vw;
+}
+
+.profileContainer {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile {
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.infoSection {
+    width: 50%;
+    padding-right: 30px;
+    padding-left: 10px;
+}
+
+.infoImg {
+    max-width: 100%;
+    display: inline-block;
+    height: auto;
+}
+
+.name {
+    margin-top: 20px;
+    font-family: Montserrat, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.qualificationContainer {
+    background-color: #ecebea;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 20px 0 20px 20px;
+}
+
+.qualification {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+.qualificationImg {
+    width: 10%;
+    max-width: 30px;
+    height: auto;
+}
+
+.qualificationDesc {
+    width: 85%;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.descriptionContainer {
+    width: 50%;
+}
+
+.header {
+    margin-bottom: 0;
+    margin-right: 10px;
+    padding-right: 0;
+}
+
+.heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 31px;
+    font-weight: 600;
+    color: #000;
+
+}
+
+.headingName {
+    color: #31c1ff;
+    font-weight: 700;
+    font-size: 45px;
+}
