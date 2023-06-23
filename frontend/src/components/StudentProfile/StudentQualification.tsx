@@ -6,6 +6,7 @@ import HomeIcon from "@/assets/images/homeIcon.png";
 import SubjectIcon from "@/assets/images/subjectIcon.png";
 import styles from "@/styles/StudentQualification.module.css";
 import Tags from "@/components/StudentProfile/Tags";
+import WishList from "./WishList";
 
 const StudentQualification = () => {
   return (
@@ -40,6 +41,7 @@ const StudentQualification = () => {
         tagsBgColor={styles.bgGreen}
         tags={["Sports", "Writing"]}
       />
+      <WishList />
     </div>
   );
 };

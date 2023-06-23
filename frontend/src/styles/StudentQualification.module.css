@@ -1,4 +1,3 @@
-
 .profileSection {
     width: 100vw;
 }
@@ -10,11 +9,10 @@
 }
 
 .profile {
-    margin-left: -10px;
-    margin-right: -10px;
     display: flex;
     justify-content: center;
     gap: 60px;
+    padding: 0px 15px;
 }
 
 .infoSection {
@@ -27,6 +25,7 @@
     max-width: 100%;
     display: inline-block;
     height: auto;
+    margin-top: 15px;
 }
 
 .name {
@@ -76,7 +75,7 @@
 }
 
 .header {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     margin-right: 10px;
     padding-right: 0;
 }
@@ -133,4 +132,94 @@
 
 .bgYellow {
     background-color: #69df41;
+}
+
+.wishListTitle {
+    margin-top: 40px;
+}
+
+.wishListText {
+    margin-bottom: 40px;
+    font-family: Questrial, sans-serif;
+    font-size: 16px;
+}
+
+.cartItem {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    margin-bottom: 15px;
+}
+
+.itemBtn {
+    color: #000;
+    background-color: #69df41;
+    border-radius: 10px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    padding: 9px;
+    font-size: 14px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.descriptionTitle {
+    color: #000;
+    margin-bottom: 15px;
+    font-family: Montserrat, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.descriptionText {
+    color: #000;
+    font-family: Questrial, sans-serif;
+    font-size: 15px;
+    margin-bottom: 24px;
+}
+
+@media screen and (max-width: 855px) {
+    .profile {
+        gap: 20px;
+    }
+
+    .itemBtn {
+        padding: 5px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .infoSection {
+        width: 100%;
+    }
+
+    .descriptionContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .cartItem {
+        grid-column-gap: 0px;
+    }
+
+    .cartItem > p {
+        font-size: 12px;
+    }
+
+    .itemBtn {
+        padding: 5px;
+        font-size: 12px;
+    }
 }
