@@ -1,5 +1,6 @@
 import { ComponentProps } from "react";
 import { Form, FormControlProps, InputGroup } from "react-bootstrap";
+import { FormCheckType } from "react-bootstrap/esm/FormCheck";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 interface FormInputFieldProps {
@@ -7,33 +8,28 @@ interface FormInputFieldProps {
   label?: string;
   error?: FieldError;
   inputGroupElement?: JSX.Element;
+  type?: FormCheckType,
   labelClass?: string;
-  infoMsgElement?: JSX.Element
-  subLabel?: string,
-  subLabelClass?: string,
+  infoMsgElement?: JSX.Element;
 }
 
-export default function FormInputField({
+export default function FormCheckboxField({
   register,
   label,
   error,
   inputGroupElement,
   infoMsgElement,
   labelClass,
-  subLabel,
-  subLabelClass,
+  type = "checkbox",
   ...props
-}: FormInputFieldProps & FormControlProps & ComponentProps<"input" | "textarea">) {
+}: FormInputFieldProps & FormControlProps & ComponentProps<"input">) {
   return (
-    <Form.Group className="mb-3" controlId={register.name + "-input"}>
-      {label && <Form.Label className={labelClass}>{label}</Form.Label>}
-      {subLabel && <Form.Label className={subLabelClass}>{subLabel}</Form.Label>}
+    <Form.Group controlId={register.name + "-input"}>
       <InputGroup hasValidation>
-        <Form.Control
-          {...register}
+        <Form.Check
+          type={type}
+          label={label}
           {...props}
-          isInvalid={!!error}
-          aria-describedby={inputGroupElement?.props.id}
         />
         {inputGroupElement}
         <Form.Control.Feedback type="invalid">

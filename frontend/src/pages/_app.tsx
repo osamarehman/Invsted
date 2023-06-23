@@ -27,12 +27,9 @@ export default function App({ Component, pageProps }: AppProps) {
           content="A full-stack NextJS project by FluxFlow Digital"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          property="og:image"
-          key="og:image"
-          content="https://flowblog.com/social_media_preview_image.png"
-        />
+        <link href="https://uploads-ssl.webflow.com/634f00870700514f27d65385/634f06fea01e55a27dfba50c_InvestED%20favicon.jpeg" rel="shortcut icon" type="image/x-icon"/>
+        <link href="https://uploads-ssl.webflow.com/634f00870700514f27d65385/634f07374a2e8f41558c837b_InvestED%20-%20webicon.jpeg" rel="apple-touch-icon"/>  
+       
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <SSRProvider>

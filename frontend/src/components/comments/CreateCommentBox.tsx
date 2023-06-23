@@ -27,6 +27,7 @@ interface CreateCommentBoxProps {
 }
 
 export default function CreateCommentBox({ blogPostId, parentCommentId, title, onCommentCreated, showCancel, onCancel, defaultText }: CreateCommentBoxProps) {
+    
     const { user } = useAuthenticatedUser();
     const authModalsContext = useContext(AuthModalsContext);
 
@@ -81,3 +82,4 @@ export default function CreateCommentBox({ blogPostId, parentCommentId, title, o
         </div>
     );
 }
+

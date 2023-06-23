@@ -93,12 +93,12 @@ const FooterRight = () => {
             </Link>
           </li>
           <li className={styles.list}>
-            <Link href="/invsted-sign-up" className={styles.links}>
+            <Link href="/signup" className={styles.links}>
               Sign Up
             </Link>
           </li>
           <li className={styles.list}>
-            <Link href="/sign-in-1" className={styles.links}>
+            <Link href="/login" className={styles.links}>
               Sign In
             </Link>
           </li>
