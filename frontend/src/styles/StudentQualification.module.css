@@ -94,3 +94,43 @@
     font-weight: 700;
     font-size: 45px;
 }
+
+.tagsTitle {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.tagsSection {
+    margin-top: 24px;
+}
+
+.tagsContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tags {
+    border-radius: 15px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #000;
+}
+
+.bgGreen {
+    background-color: #ffe000;
+}
+
+.bgBlue {
+    background-color: #31c1ff;
+}
+
+.bgYellow {
+    background-color: #69df41;
+}
