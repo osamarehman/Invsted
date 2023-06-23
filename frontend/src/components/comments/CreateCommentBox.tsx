@@ -9,7 +9,7 @@ import * as BlogApi from "@/network/api/blog";
 import { Button, Form } from "react-bootstrap";
 import FormInputField from "../form/FormInputField";
 import LoadingButton from "../LoadingButton";
-
+/*
 const validationSchema = yup.object({
     text: yup.string(),
 });
@@ -81,3 +81,4 @@ export default function CreateCommentBox({ blogPostId, parentCommentId, title, o
         </div>
     );
 }
+*/
