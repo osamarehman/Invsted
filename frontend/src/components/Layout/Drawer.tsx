@@ -9,11 +9,20 @@ import Image from "next/image";
 import { useState } from "react";
 
 interface IDrawer {
-  setScreen: (screen: string) => void
+  setScreen: (screen: string) => void,
+  setDrawerOpenStyle: (drawerOpen: boolean) => void,
 }
 
-const Drawer = ({ setScreen }: IDrawer) => {
+const Drawer = ({ setScreen, setDrawerOpenStyle }: IDrawer) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  
+  const handleDrawerToggle = () => {
+    setIsDrawerOpen((prev) => {
+      let newValue = !prev;
+      setDrawerOpenStyle(newValue);
+      return newValue;
+    });
+  }
   return (
     <div
       className={`${styles.drawerContainer} ${
@@ -25,7 +34,7 @@ const Drawer = ({ setScreen }: IDrawer) => {
           {isDrawerOpen && <span className={styles.headerTitle}>{"Dashboard"}</span>}
           <span className={styles.headerMobile}>{"Dashboard"}</span>
           <Image
-            onClick={() => setIsDrawerOpen((prev) => !prev)}
+            onClick={handleDrawerToggle}
             className={`${styles.icon} ${styles.hamburgerIcon} ${
               isDrawerOpen ? `${styles.iconOpen}` : ""
             }`}

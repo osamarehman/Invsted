@@ -1,0 +1,28 @@
+
+
+.tabs {
+    color: #000;
+    background-color: transparent;
+    font-weight: 700;
+    border-radius: 6px;
+    line-height: 1.6;
+    transition: color .2s, background-color .2s;
+    margin-right: 4px;
+    padding: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tabContent {
+    margin-bottom: 0px;
+}
+
+.activeTab {
+    color: #31c1ff;
+    background-color: #e8f0fe;
+}
+
+.tabs:hover {
+    color: #31c1ff;
+    background-color: #e8f0fe;
+}

@@ -14,6 +14,10 @@
     overflow-y: hidden;
 }
 
+.drawerOpen {
+    width: calc(100vw - 280px);
+}
+
 @media screen and (max-width: 767px) {
     .customFooterStyle {
         width: 100vw;

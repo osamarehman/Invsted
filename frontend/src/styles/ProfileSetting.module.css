@@ -1,0 +1,69 @@
+
+.settingSection {
+    width: 100%;
+    max-width: 100vw;
+    background-color: #fff;
+    padding-bottom: 32px;
+    padding-top: 42px;
+}
+
+.settingContainer {
+    max-width: 940px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgba(34, 37, 37, .2);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+}
+
+.settingsHeader {
+    height: 100px;
+}
+
+.settingsTitle {
+    color: #272b31;
+    margin-bottom: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+}
+
+.settingsContent {}
+
+.tabsHeader {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f7;
+    border-radius: 12px;
+    padding: 8px;
+    gap: 10px;
+}
+
+.logOutBtn {
+    color: #000;
+    background-color: #69df41;
+    margin-right: 0;
+    padding-left: 10px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logOutIcon {
+    height: 24px;
+    width: 18px;
+}
+
+.tabsContent {
+    padding: 8px;
+}
