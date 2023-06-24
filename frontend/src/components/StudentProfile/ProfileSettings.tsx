@@ -9,17 +9,17 @@ import PreferenceForm from "./PreferenceForm";
 import BankForm from "./BankForm";
 
 interface IRenderTab {
-    [key: string]: JSX.Element
+  [key: string]: JSX.Element;
 }
 
-const RenderTab = ({tab = ""}) => {
-  const tabs:IRenderTab  = {
-      "Profile": <ProfileForm />,
-      "Preferences": <PreferenceForm />,
-      "Bank Info": <BankForm />
+const RenderTab = ({ tab = "" }) => {
+  const tabs: IRenderTab = {
+    Profile: <ProfileForm />,
+    Preferences: <PreferenceForm />,
+    "Bank Info": <BankForm />,
   };
   return tabs[tab];
-}
+};
 
 const ProfileSettings = ({ profileStyles = "" }) => {
   const [tabs, setTabs] = useState("Profile");
@@ -44,12 +44,16 @@ const ProfileSettings = ({ profileStyles = "" }) => {
               />
             ))}
             <Button className={styles.logOutBtn}>
-              <Image className={styles.logOutIcon} src={LogoutIcon} alt="logout icon" />
+              <Image
+                className={styles.logOutIcon}
+                src={LogoutIcon}
+                alt="logout icon"
+              />
               <span>Log out</span>
             </Button>
           </div>
           <div className={styles.tabsContent}>
-            <RenderTab tab={tabs}/>
+            <RenderTab tab={tabs} />
           </div>
         </div>
       </Container>
