@@ -1,10 +1,13 @@
-import Layout from "@/components/Layout/Layout";
-
+import Drawer from "@/components/Layout/Drawer";
+import Footer from "@/components/Layout/Footer";
 
 export default function StudentProfile () {
     return (
-        <Layout>
-            student bank info
-        </Layout>
+        <div>
+            <div>
+                <Drawer />
+            </div>
+            <Footer />
+        </div>
     )
 }

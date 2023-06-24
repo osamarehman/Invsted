@@ -1,0 +1,161 @@
+.drawerContainer {
+    height: 100vh;
+    width: 90px;
+    color: #eeedf2;
+    background-color: #131313;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 20px;
+    align-items: center;
+}
+
+.drawerOpen {
+    width: 280px;
+}
+
+.navHeader {
+    color: #eeedf2;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.separator {
+    width: 100%;
+    height: 3px;
+    margin-top: 27px;
+    background-color: #eeedf22e;
+}
+
+.navLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.headerTitle {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.name {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+
+.navLinksOpen {
+    align-items: flex-start;
+}
+
+.headerMobile {
+    display: none;
+}
+
+.link {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    color: #eeedf2;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+}
+
+.navFooter {
+    color: #eeedf2;
+    width: 100%
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.iconOpen {
+    margin: 0px;
+}
+
+.profileImg {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+    .drawerContainer {
+        width: 100vw;
+        height: 82px;
+        flex-direction: row;
+    }
+
+    .hamburgerIcon {
+        display: none;
+    }
+
+    .separator {
+        display: none;
+    }
+
+    .navHeader {
+        width: auto;
+        margin-top: 0px;
+    }
+
+    .navFooter {
+        width: auto;
+    }
+
+    .headerMobile {
+        display: block;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .navLinks {
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 25px;
+    }
+
+    .link {
+        margin-bottom: 0px;
+    }
+
+    .profileImg {
+        margin-left: auto;
+        margin-right: inherit;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navLinks {
+        column-gap: 15px;
+    }
+
+    .headerMobile {
+        font-size: 16px;
+    }
+
+    .profileImg {
+        width: 24px;
+        height: 24px;
+    }
+}
