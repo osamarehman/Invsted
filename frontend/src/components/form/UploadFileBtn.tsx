@@ -6,11 +6,12 @@ import { Button } from "react-bootstrap";
 interface IUploadFileBtn {
   onClick: () => void;
   file?: string;
+  containerStyle?: string,
 }
 
-const UploadFileBtn = ({ onClick, file }: IUploadFileBtn) => {
+const UploadFileBtn = ({ onClick, file, containerStyle }: IUploadFileBtn) => {
   return (
-    <div className={styles.uploadContainer}>
+    <div className={`${styles.uploadContainer} ${containerStyle}`}>
       <Image
         className={styles.uploadIcon}
         src={FileIcon}

@@ -11,6 +11,7 @@ interface FormInputFieldProps {
   type?: FormCheckType,
   labelClass?: string;
   infoMsgElement?: JSX.Element;
+  checkBoxStyle?: string,
 }
 
 export default function FormCheckboxField({
@@ -21,10 +22,11 @@ export default function FormCheckboxField({
   infoMsgElement,
   labelClass,
   type = "checkbox",
+  checkBoxStyle = "",
   ...props
 }: FormInputFieldProps & FormControlProps & ComponentProps<"input">) {
   return (
-    <Form.Group controlId={register.name + "-input"}>
+    <Form.Group className={checkBoxStyle} controlId={register.name + "-input"}>
       <InputGroup hasValidation>
         <Form.Check
           type={type}

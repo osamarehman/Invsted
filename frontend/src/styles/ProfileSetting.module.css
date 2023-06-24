@@ -86,7 +86,6 @@
 .formDescription {
     margin: 0;
     font-size: 13px;
-    font-weight: 700;
     max-width: 400px;
 }
 
@@ -118,6 +117,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex;
+    align-items: center;
 }
 
 .label {
@@ -127,6 +127,72 @@
     line-height: 1;
     display: block;
     margin-bottom: 5px;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.label > span {
+    font-weight: 400;
+}
+
+.formContainerClass {
+    margin-bottom: 0px;
+    flex: 1;
+}
+
+.formInput {
+    border: 1px solid #b7bbd1;
+}
+
+.changeEmailContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.email {
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.emailBtn {
+    color: #000;
+    border: 1px solid #69df41;
+    background-color: #69df41;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.customBorders1 {
+    border-radius: 6px 0px 0px 6px;
+}
+
+.customBorders2 {
+    border-radius: 0px 6px 6px 0px;
+}
+
+.customBorders3 {
+    border-radius: 0px;
+}
+
+.socialBtns {
+    color: #272b31;
+    border: 1px solid #b7bbd1;
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 12px 40px 12px 15px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px -1px rgba(29, 1, 80, .1);
+}
+
+.rowContent {
+    width: 65%;
+    display: flex;
 }
 
 @media screen and (max-width: 767px) {

@@ -11,6 +11,7 @@ interface FormInputFieldProps {
   infoMsgElement?: JSX.Element
   subLabel?: string,
   subLabelClass?: string,
+  formContainerClass?: string,
 }
 
 export default function FormInputField({
@@ -22,10 +23,11 @@ export default function FormInputField({
   labelClass,
   subLabel,
   subLabelClass,
+  formContainerClass = "",
   ...props
 }: FormInputFieldProps & FormControlProps & ComponentProps<"input" | "textarea">) {
   return (
-    <Form.Group className="mb-3" controlId={register.name + "-input"}>
+    <Form.Group className={`"mb-3" ${formContainerClass}`} controlId={register.name + "-input"}>
       {label && <Form.Label className={labelClass}>{label}</Form.Label>}
       {subLabel && <Form.Label className={subLabelClass}>{subLabel}</Form.Label>}
       <InputGroup hasValidation>
