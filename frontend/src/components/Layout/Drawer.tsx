@@ -8,7 +8,11 @@ import HamBurgerIcon from "@/assets/images/hamburger.svg";
 import Image from "next/image";
 import { useState } from "react";
 
-const Drawer = () => {
+interface IDrawer {
+  setScreen: (screen: string) => void
+}
+
+const Drawer = ({ setScreen }: IDrawer) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   return (
     <div
@@ -40,7 +44,7 @@ const Drawer = () => {
           <FaHome size={24} color={"#808082"} />
           {isDrawerOpen ? " Home" : ""}
         </Link>
-        <p className={styles.link}>
+        <p className={styles.link} onClick={() => setScreen("profile")}>
           <Image
             className={styles.icon}
             src={DashBoardIcon}
@@ -48,7 +52,7 @@ const Drawer = () => {
           />
           {isDrawerOpen ? " Dashboard" : ""}
         </p>
-        <p className={styles.link}>
+        <p className={styles.link} onClick={() => setScreen("settings")}>
           <FcSettings size={24} color={"#808082"} />
           {isDrawerOpen ? " Settings" : ""}
         </p>

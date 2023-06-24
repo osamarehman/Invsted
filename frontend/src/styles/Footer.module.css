@@ -151,4 +151,8 @@
     .gettingStartedSection {
         padding: 25px;
     }
+
+    .linkContainer {
+        margin-left: 0px;
+    }
 }

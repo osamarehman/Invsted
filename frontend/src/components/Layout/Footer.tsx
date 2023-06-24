@@ -4,9 +4,9 @@ import CTAContainer from "@/components//Containers/CTAContainer";
 import FooterLeft from "./FooterLeft";
 import FooterRight from "./FooterRight";
 
-export default function Footer() {
+export default function Footer({ footerStyle = "" }) {
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${footerStyle}`}>
       <CTAContainer />
       <section className={styles.mainFooter}>
         <Container className={styles.container}>

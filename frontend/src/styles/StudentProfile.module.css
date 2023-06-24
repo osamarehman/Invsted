@@ -1,0 +1,32 @@
+.customFooterStyle {
+    width: calc(100vw - 90px);
+    margin-left: auto;
+}
+
+.customProfileStyle {
+    margin-top: 20px;
+    width: calc(100vw - 90px);
+    margin-left: auto;
+}
+
+.profileContainer {
+    display: flex;
+    overflow-y: hidden;
+}
+
+@media screen and (max-width: 767px) {
+    .customFooterStyle {
+        width: 100vw;
+        margin-left: auto;
+    }
+
+    .customProfileStyle {
+        margin-top: 110px;
+        width: 100vw;
+        margin-left: auto;
+    }
+
+    .profileContainer {
+        flex-direction: column;
+    }
+}
