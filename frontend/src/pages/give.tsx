@@ -24,7 +24,7 @@ export default function ViewStudents() {
           </Container>
         </section>
         <section id="all-students">
-            <Container>
+            <Container className={styles.studentContainer}>
                 <StudentFilter />
                 <Students />
             </Container>

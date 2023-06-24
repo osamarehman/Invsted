@@ -20,3 +20,119 @@
     margin-bottom: 24px;
     color: #000;
 }
+
+.studentContainer {
+    margin-bottom: 100px;
+    max-width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.filterSection {
+    width: 250px;
+    background-color: #f8f6f4;
+    border-radius: 5px;
+    flex: none;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 20px 10px;
+}
+
+.filterContainer {
+    margin-bottom: 0px;
+}
+
+.filter {}
+
+.filterTitle {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.28571;
+}
+
+.filterOptions {
+    border-top: 1px solid #69df42;
+    border-bottom: 1px solid #69df42;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.studentSection {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cardContainer {
+    width: 100%;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+}
+
+.titleStyle {
+    padding-top: 0px;
+    min-height: 60px;
+}
+
+.cardStyle {
+    max-width: 230px;
+}
+
+.cardBody {}
+
+.university {
+    margin-bottom: 10px;
+}
+
+.viewLink {
+    color: #31c1ff;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+    .filterSection {
+        width: 200px;
+    }
+
+    .cardStyle {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .studentContainer {
+        flex-direction: column;
+    }
+
+    .cardContainer {
+        gap: 30px;
+    }
+
+    .filterSection {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .cardStyle {
+        max-width: 300px;
+    }
+}
