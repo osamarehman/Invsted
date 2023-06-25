@@ -77,8 +77,48 @@
     text-decoration: none;
 }
 
+.textCardContainer {
+    max-width: 280px;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #fff;
+    border: none;
+}
+
+.textBody {
+
+}
+
+.textTitle {
+    text-align: left;
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #000;
+    margin-bottom: 12px;
+}
+
+.text {
+    text-align: left;
+    margin-top: 40px;
+    font-family: Questrial, sans-serif;
+    margin-bottom: 24px;
+    color: #000;
+}
+
 @media screen and (max-width: 991px) {
     .cardSection {
         width: 100%;
+    }
+
+    .textTitle {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .textCardContainer {
+        max-width: 100%;
     }
 }

@@ -39,6 +39,11 @@
     font-family: Montserrat, sans-serif;
 }
 
+.paddingY {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 .title {
     font-family: Montserrat, sans-serif;
     font-weight: 700;
@@ -216,13 +221,32 @@
 }
 
 .cardStyle {
-    max-width: 270px;
+    max-width: 270px !important;
+}
+
+.btnWhite {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 10px 24px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: box-shadow .2s;
+    position: relative;
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0);
 }
 
 .cardBody {}
 
 .university {
     margin-bottom: 10px;
+}
+
+.lineHeight24 {
+    line-height: 24px;
 }
 
 .viewLink {

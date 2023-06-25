@@ -16,6 +16,7 @@ import { InvstedStudentHomeLink } from "@/config";
 import ValueSection from "@/components/Sections/ValueSection";
 import { InvstedBenefits } from "@/config/values";
 import GeneralCard from "@/components/Cards/GeneralCard";
+import WhyInvstedSection from "@/components/Sections/WhyInvstedSection";
 
 export default function StudentsHome() {
   return (
@@ -30,6 +31,54 @@ export default function StudentsHome() {
         linkStyle={styles.width100}
         src={StudentHomeImage}
       />
+      <WhyInvstedSection
+        textCardTitle1="Food Insecurity"
+        textCardTitle2="Burden of work"
+        textCardTitle3="Mental health"
+        textCardTitle4="Family obligations"
+        textDesc1="Have you had to skip a meal or a night out with friends because you don't have the money?"
+        textDesc2="Have you had to work while in school to meet your obligations or to keep up with the costs?"
+        textDesc3="Has your mental health suffered due to worry about money, or anxiety because what you have is never enough?"
+        textDesc4="Have you had to worry about your family's financial state, or even take care of them while in school?"
+        title="Is invstED right for me?"
+        text={
+          <p>
+            We know that everyone’s circumstances are different. Household
+            income and student loans are a poor proxy for a person’s individual
+            needs.
+            <br />
+            <br />
+            We want to make sure there are no barriers to support and you have
+            access to the channels you need to get to a place of financial
+            stability and freedom.
+          </p>
+        }
+      />
+      <section
+        id="learn-more"
+        className={`${styles.paddingY} ${styles.stepSection}`}
+      >
+        <Container className={`${styles.stepContainer} flex-column`}>
+          <h1
+            className={`${styles.title} ${styles.titleSteps} ${styles.textYellow} mt-3`}
+          >
+            How it works
+          </h1>
+          <p className={`${styles.description} ${styles.lineHeight24}`}>
+            <strong>
+              Through invstED, getting everyday financial support is easier and
+              more accessible. Students receive money they need while building
+              their networks and becoming a part of a community.
+            </strong>
+            <br />
+            <br />
+            At invstED, we know that every little bit can make a difference, and
+            we aim to create opportunities for others to provide the every day
+            support you need so you can focus on school, not your struggles.​
+          </p>
+          <IFrameContainer IframeSrc={InvstedStudentHomeLink} />
+        </Container>
+      </section>
       <StepsContainer
         subTitle="Step One"
         title="Create your profile"
@@ -87,14 +136,17 @@ export default function StudentsHome() {
         titleStyle={styles.titleSteps}
         imageStyle={styles.smallImage}
       />
-      <section id="learn-more" className={styles.stepSection}>
+      <section
+        id="learn-more"
+        className={`${styles.paddingY} ${styles.stepSection}`}
+      >
         <Container className={`${styles.stepContainer} flex-column`}>
           <h1
             className={`${styles.title} ${styles.titleSteps} ${styles.textYellow} mt-3`}
           >
             Learn more
           </h1>
-          <p className={styles.description}>
+          <p className={`${styles.description} ${styles.lineHeight24}`}>
             The benefit of joining invstED, is that you can create a profile to
             highlight your passions and goals, and then share this with family
             and friends so that they can invest in you.
@@ -162,7 +214,7 @@ export default function StudentsHome() {
             >
               Want to learn more?
             </h1>
-            <p className={styles.description}>
+            <p className={`${styles.description} ${styles.lineHeight24}`}>
               If you are interested in becoming an ambassador, or bringing
               invstED to your school, please email{" "}
               <strong className={styles.textBlue}>questions@invsted.org</strong>
@@ -171,13 +223,15 @@ export default function StudentsHome() {
         </Container>
       </section>
       <section
-        className={`${styles.stepSection} ${styles.joinCommunitySection}`}
+        className={`${styles.stepSection} ${styles.joinCommunitySection} d-flex`}
       >
         <Container className={`${styles.stepContainer} flex-column`}>
-          <h1 className={`${styles.title} ${styles.titleSteps}`}>
+          <h1 className={`${styles.title} ${styles.titleSteps} text-center`}>
             Join our Community
           </h1>
-          <Link href="/signup">Sign Up</Link>
+          <Link className={styles.btnWhite} href="/signup">
+            Sign Up
+          </Link>
         </Container>
       </section>
     </Layout>
