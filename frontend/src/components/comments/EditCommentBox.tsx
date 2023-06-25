@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import * as BlogApi from "@/network/api/blog";
 import { Button, Form } from "react-bootstrap";
-import FormInputField from "../form/FormInputField";
-import LoadingButton from "../LoadingButton";
+import FormInputField from "@/components/form/FormInputField";
+import LoadingButton from "@/components/LoadingButton";
 import { useEffect } from "react";
 
 const validationSchema = yup.object({

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import StudentImage from "@/assets/images/Jezz.png";
-import Qualification from "./Qualification";
+import Qualification from "@/components/StudentProfile/Qualification";
 import GradIcon from "@/assets/images/gradIcon.png";
 import HomeIcon from "@/assets/images/homeIcon.png";
 import SubjectIcon from "@/assets/images/subjectIcon.png";
 import styles from "@/styles/StudentQualification.module.css";
 import Tags from "@/components/StudentProfile/Tags";
-import WishList from "./WishList";
+import WishList from "@/components/StudentProfile/WishList";
 
 const StudentQualification = () => {
   return (

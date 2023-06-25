@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card } from "react-bootstrap";
 import { formatDate } from "@/utils/utils";
 import Image from "next/image";
-import UserProfileLink from "./UserProfileLink";
+import UserProfileLink from "@/components/UserProfileLink";
 
 interface BlogPostEntryProps {
     post: BlogPost,

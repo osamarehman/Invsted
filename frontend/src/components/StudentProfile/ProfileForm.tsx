@@ -11,9 +11,9 @@ import AvatarIcon from "@/assets/images/AvatarIcon.svg";
 import Image from "next/image";
 import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
 import { createPortal } from "react-dom";
-import ChangeEmailModal from "../Modals/ChangeEmailModal";
-import UpdatePasswordModal from "../Modals/UpdatePasswordModal";
-import UpdateProfileModal from "../Modals/UpdateProfileModal";
+import ChangeEmailModal from "@/components/Modals/ChangeEmailModal";
+import UpdatePasswordModal from "@/components/Modals/UpdatePasswordModal";
+import UpdateProfileModal from "@/components/Modals/UpdateProfileModal";
 
 interface IRenderModal {
   [key: string]: JSX.Element;

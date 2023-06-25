@@ -1,8 +1,8 @@
 import styles from "@/styles/Footer.module.css";
 import { Container } from "react-bootstrap";
 import CTAContainer from "@/components//Containers/CTAContainer";
-import FooterLeft from "./FooterLeft";
-import FooterRight from "./FooterRight";
+import FooterLeft from "@/components/Layout/FooterLeft";
+import FooterRight from "@/components/Layout/FooterRight";
 
 export default function Footer({ footerStyle = "" }) {
   return (

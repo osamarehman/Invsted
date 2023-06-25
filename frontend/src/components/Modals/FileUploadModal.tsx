@@ -1,5 +1,5 @@
 
-import ModalContainer from "../Containers/ModalContainer";
+import ModalContainer from "@/components/Containers/ModalContainer";
 import styles from "@/styles/Modal.module.css";
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
 

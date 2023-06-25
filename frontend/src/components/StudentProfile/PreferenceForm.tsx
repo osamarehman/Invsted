@@ -12,7 +12,7 @@ import { useState, useRef, useEffect } from "react";
 import { createPortal } from "react-dom";
 import FormCheckboxField from "@/components/form/FormCheckboxField";
 import GridContainer from "@/components/Containers/GridContainer";
-import FileUploadModal from "../Modals/FileUploadModal";
+import FileUploadModal from "@/components/Modals/FileUploadModal";
 
 const PreferenceForm = () => {
   const [showModal, setShowModal] = useState(false);

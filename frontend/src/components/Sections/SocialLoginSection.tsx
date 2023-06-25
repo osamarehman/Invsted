@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "react-bootstrap";
-import GoogleSignInButton from "../auth/GoogleSignInButton";
-import LinkedInSignInButton from "../auth/LinkedinSignInButton";
+import GoogleSignInButton from "@/components/auth/GoogleSignInButton";
+import LinkedInSignInButton from "@/components/auth/LinkedinSignInButton";
 import styles from "@/styles/SocialLoginSection.module.css";
 
 interface ISocialLoginSection {

@@ -2,13 +2,13 @@ import useAuthenticatedUser from "@/hooks/useAuthenticatedUser";
 import { Comment } from "@/models/comment";
 import { useContext, useEffect } from "react";
 import * as yup from "yup";
-import { AuthModalsContext } from "../auth/AuthModalsProvider";
+import { AuthModalsContext } from "@/components/auth/AuthModalsProvider";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as BlogApi from "@/network/api/blog";
 import { Button, Form } from "react-bootstrap";
-import FormInputField from "../form/FormInputField";
-import LoadingButton from "../LoadingButton";
+import FormInputField from "@/components/form/FormInputField";
+import LoadingButton from "@/components/LoadingButton";
 
 const validationSchema = yup.object({
     text: yup.string(),

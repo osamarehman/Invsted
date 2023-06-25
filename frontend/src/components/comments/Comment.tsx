@@ -1,12 +1,12 @@
 import { Comment as CommentModel } from "@/models/comment";
-import UserProfileLink from "../UserProfileLink";
+import UserProfileLink from "@/components/UserProfileLink";
 import { formatRelativeDate } from "@/utils/utils";
-import EditCommentBox from "./EditCommentBox";
+import EditCommentBox from "@/components/comments/EditCommentBox";
 import useAuthenticatedUser from "@/hooks/useAuthenticatedUser";
 import { useContext, useState } from "react";
-import { AuthModalsContext } from "../auth/AuthModalsProvider";
+import { AuthModalsContext } from "@/components/auth/AuthModalsProvider";
 import { Button } from "react-bootstrap";
-import CreateCommentBox from "./CreateCommentBox";
+import CreateCommentBox from "@/components/comments/CreateCommentBox";
 import { NotFoundError } from "@/network/http-errors";
 import * as BlogApi from "@/network/api/blog";
 

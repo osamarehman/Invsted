@@ -1,7 +1,7 @@
-import ModalContainer from "../Containers/ModalContainer";
+import ModalContainer from "@/components/Containers/ModalContainer";
 import styles from "@/styles/Modal.module.css";
 import { ChangeEvent, Dispatch, SetStateAction } from "react";
-import FormInputField from "../form/FormInputField";
+import FormInputField from "@/components/form/FormInputField";
 import { Button } from "react-bootstrap";
 
 interface IModal {

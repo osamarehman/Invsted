@@ -4,9 +4,9 @@ import Tabs from "@/components/Tabs/Tabs";
 import { useState } from "react";
 import LogoutIcon from "@/assets/images/logoutIcon.svg";
 import Image from "next/image";
-import ProfileForm from "./ProfileForm";
-import PreferenceForm from "./PreferenceForm";
-import BankForm from "./BankForm";
+import ProfileForm from "@/components/StudentProfile/ProfileForm";
+import PreferenceForm from "@/components/StudentProfile/PreferenceForm";
+import BankForm from "@/components/StudentProfile/BankForm";
 
 interface IRenderTab {
   [key: string]: JSX.Element;

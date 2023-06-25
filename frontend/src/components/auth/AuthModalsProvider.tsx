@@ -1,7 +1,7 @@
 import { ReactNode, createContext, useState } from "react";
-import LoginModal from "./LoginModal";
-import SignUpModal from "./SignUpModal";
-import ResetPasswordModal from "./ResetPasswordModal";
+import LoginModal from "@/components/auth/LoginModal";
+import SignUpModal from "@/components/auth/SignUpModal";
+import ResetPasswordModal from "@/components/auth/ResetPasswordModal";
 
 interface AuthModalsContext {
     showLoginModal: () => void,

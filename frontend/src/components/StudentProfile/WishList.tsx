@@ -1,5 +1,5 @@
 import styles from "@/styles/StudentQualification.module.css";
-import CartBtnList from "./CartBtnList";
+import CartBtnList from "@/components/StudentProfile/CartBtnList";
 
 const WishList = () => {
   return (

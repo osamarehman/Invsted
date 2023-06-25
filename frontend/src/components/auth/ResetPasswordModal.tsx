@@ -8,9 +8,9 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import * as UsersApi from "@/network/api/users";
 import { Alert, Button, Form, Modal } from "react-bootstrap";
-import FormInputField from "../form/FormInputField";
-import PasswordInputField from "../form/PasswordInputField";
-import LoadingButton from "../LoadingButton";
+import FormInputField from "@/components/form/FormInputField";
+import PasswordInputField from "@/components/form/PasswordInputField";
+import LoadingButton from "@/components/LoadingButton";
 
 const validationSchema = yup.object({
     email: emailSchema.required("Required"),

@@ -1,7 +1,7 @@
 import { ComponentProps, useState } from "react";
 import { Button, FormControlProps } from "react-bootstrap";
 import { FieldError, UseFormRegisterReturn } from "react-hook-form";
-import FormInputField from "./FormInputField";
+import FormInputField from "@/components/form/FormInputField";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 interface PasswordInputFieldProps {

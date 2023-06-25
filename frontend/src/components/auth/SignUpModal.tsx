@@ -1,16 +1,16 @@
 import { Alert, Button, Form, Modal } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import * as UsersApi from "@/network/api/users";
-import FormInputField from "../form/FormInputField";
-import PasswordInputField from "../form/PasswordInputField";
-import LoadingButton from "../LoadingButton";
+import FormInputField from "@/components/form/FormInputField";
+import PasswordInputField from "@/components/form/PasswordInputField";
+import LoadingButton from "@/components/LoadingButton";
 import useAuthenticatedUser from "@/hooks/useAuthenticatedUser";
 import { useState } from "react";
 import { BadRequestError, ConflictError } from "@/network/http-errors";
 import * as yup from "yup";
 import { emailSchema, passwordSchema, requiredStringSchema, usernameSchema } from "@/utils/validation";
 import { yupResolver } from "@hookform/resolvers/yup";
-import SocialSignInSection from "./SocialSignInSection";
+import SocialSignInSection from "@/components/auth/SocialSignInSection";
 import useCountdown from "@/hooks/useCountdown";
 
 const validationSchema = yup.object({

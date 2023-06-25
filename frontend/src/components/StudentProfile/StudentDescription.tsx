@@ -1,5 +1,5 @@
 import styles from "@/styles/StudentQualification.module.css";
-import Description from "./Description";
+import Description from "@/components/StudentProfile/Description";
 
 const StudentDescription = () => {
   return (

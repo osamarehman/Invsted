@@ -1,5 +1,5 @@
-import GitHubSignInButton from "./GitHubSignInButton";
-import GoogleSignInButton from "./GoogleSignInButton";
+import GitHubSignInButton from "@/components/auth/GitHubSignInButton";
+import GoogleSignInButton from "@/components/auth/GoogleSignInButton";
 
 export default function SocialSignInSection() {
     return (
