@@ -1,0 +1,106 @@
+.fileUploadTitle {
+    font-size: 42.5px;
+    line-height: 50px;
+    margin: 0 0 10px;
+    padding: 0;
+    color:#000;
+    text-align: center;
+    font-weight: 400;
+}
+
+.fileUploadText {
+    font-size: 15px;
+    line-height: 20px;
+    color: #a4a2a1;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: center;
+}
+
+.fileUploadBtn {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 25px;
+    background: #157cfc;
+    color: #fff;
+    border-radius: 6px;
+    box-shadow: none;
+    min-height: 0;
+    min-width: 100px;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.fileTypeInput {
+    display: none;
+}
+
+.modalBody {
+    margin-right: auto;
+    flex: 1;
+}
+
+.formLabel {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.formInput {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #b7bbd1;
+    border-radius: 6px;
+    margin-bottom: 0;
+    padding-top: 10px;
+    font-weight: 700;
+    padding-left: 18px;
+    font-size: 15px;
+    transition: border-color .2s, box-shadow .2s;
+    box-shadow: 0 3px 6px -2px rgba(29, 1, 80, .1);
+}
+
+.infoMsg {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.msg {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-top: -10px;
+}
+
+.formBtn {
+    color: #000;
+    text-align: center;
+    background-color: #69df41;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-right: 15px;
+    transition: background-color .2s, transform .2s;
+}
+
+.marginRightAuto {
+    margin-right: auto;
+}
+
+
+@media screen and (max-width: 576px) {
+    .fileUploadTitle {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .fileUploadBtn {
+        font-size: 18px;
+        padding: 10px;
+    }
+}

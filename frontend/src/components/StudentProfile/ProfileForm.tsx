@@ -9,8 +9,49 @@ import FacebookSignInButton from "@/components/auth/FacebookSignInButton";
 import PasswordIcon from "@/assets/images/PasswordIcon.svg";
 import AvatarIcon from "@/assets/images/AvatarIcon.svg";
 import Image from "next/image";
+import { useState, useRef, useEffect, Dispatch, SetStateAction } from "react";
+import { createPortal } from "react-dom";
+import ChangeEmailModal from "../Modals/ChangeEmailModal";
+import UpdatePasswordModal from "../Modals/UpdatePasswordModal";
+import UpdateProfileModal from "../Modals/UpdateProfileModal";
+
+interface IRenderModal {
+  [key: string]: JSX.Element;
+}
+
+interface IModal {
+  type: string
+  showModal: boolean,
+  setShowModal: Dispatch<SetStateAction<boolean>>,
+  setModalType: Dispatch<SetStateAction<string>>,
+}
+
+const RenderModal = ({ type, showModal, setShowModal, setModalType}:IModal) => {
+  const modalType: IRenderModal = {
+    email: <ChangeEmailModal showModal={showModal} setShowModal={setShowModal} setModalType={setModalType} />,
+    password: <UpdatePasswordModal showModal={showModal} setShowModal={setShowModal} setModalType={setModalType} />,
+    profile: <UpdateProfileModal showModal={showModal} setShowModal={setShowModal} setModalType={setModalType} />,
+  };
+
+  return modalType[type];
+};
 
 const ProfileForm = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [modalType, setModalType] = useState("");
+  const ref = useRef<Element | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    ref.current = document.querySelector<HTMLElement>("#portal");
+    setMounted(true);
+  }, []);
+
+  const handleModalOpen = (type:string) => {
+    setModalType(type);
+    setShowModal(true);
+  }
+
   return (
     <div>
       <FormHeader
@@ -72,7 +113,7 @@ const ProfileForm = () => {
         <div className={`${styles.rowContent} flex-column`}>
           <FormInputField
             register={{
-              name: "phone",
+              name: "address",
               required: true,
               onChange: async (e) => console.log(e.target.value),
               onBlur: async (e) => console.log(e.target.value),
@@ -82,10 +123,10 @@ const ProfileForm = () => {
             placeholder="Street Address"
             className={`${styles.formInput}`}
           />
-          <div className="d-flex mt-3">
+          <div className={`d-flex mt-3 ${styles.flexDirectionColumn}`}>
             <FormInputField
               register={{
-                name: "phone",
+                name: "city",
                 required: true,
                 onChange: async (e) => console.log(e.target.value),
                 onBlur: async (e) => console.log(e.target.value),
@@ -97,7 +138,7 @@ const ProfileForm = () => {
             />
             <FormInputField
               register={{
-                name: "phone",
+                name: "state",
                 required: true,
                 onChange: async (e) => console.log(e.target.value),
                 onBlur: async (e) => console.log(e.target.value),
@@ -109,7 +150,7 @@ const ProfileForm = () => {
             />
             <FormInputField
               register={{
-                name: "phone",
+                name: "zip",
                 required: true,
                 onChange: async (e) => console.log(e.target.value),
                 onBlur: async (e) => console.log(e.target.value),
@@ -125,7 +166,7 @@ const ProfileForm = () => {
       <FormRow label="Email">
         <div className={styles.changeEmailContainer}>
           <p className={styles.email}>howard.thurman@gmail.com</p>
-          <Button className={styles.emailBtn}>@ Change Email Address</Button>
+          <Button className={styles.emailBtn} onClick={() => handleModalOpen("email")}>@ Change Email Address</Button>
         </div>
       </FormRow>
       <FormRow label="Social Accounts">
@@ -138,19 +179,31 @@ const ProfileForm = () => {
       <FormRow label="Password">
         <div className={styles.changeEmailContainer}>
           <p className={styles.email}>*********</p>
-          <Button className={styles.emailBtn}>
-            <Image src={PasswordIcon} width={18} alt="password icon" /> Update Password
+          <Button className={styles.emailBtn}  onClick={() => handleModalOpen("password")}>
+            <Image src={PasswordIcon} width={18} alt="password icon" /> Update
+            Password
           </Button>
         </div>
       </FormRow>
       <FormRow label="Profile Visibility">
         <div className={styles.changeEmailContainer}>
           <p className={styles.email}>Active</p>
-          <Button className={styles.emailBtn}>
+          <Button className={styles.emailBtn}  onClick={() => handleModalOpen("profile")}>
             <Image src={AvatarIcon} alt="avatar icon" /> Update Profile
           </Button>
         </div>
       </FormRow>
+      {mounted &&
+        ref?.current &&
+        createPortal(
+          <RenderModal
+            type={modalType}
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setModalType={setModalType}
+          />,
+          ref.current
+        )}
     </div>
   );
 };

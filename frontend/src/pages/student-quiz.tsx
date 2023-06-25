@@ -16,8 +16,8 @@ import {
 } from "@/config/formFieldConfig";
 import UploadFileBtn from "@/components/form/UploadFileBtn";
 import { useState, useRef, useEffect, ChangeEvent } from "react";
-import ModalContainer from "@/components/Containers/ModalContainer";
 import { createPortal } from "react-dom";
+import FileUploadModal from "@/components/Modals/FileUploadModal";
 
 export default function StudentQuiz() {
   const [showModal, setShowModal] = useState(false);
@@ -29,18 +29,6 @@ export default function StudentQuiz() {
     ref.current = document.querySelector<HTMLElement>("#portal");
     setMounted(true);
   }, []);
-
-  const handleFileInput = (event: ChangeEvent<HTMLInputElement>) => {
-    setShowModal(false);
-
-    const input = event.target as HTMLInputElement;
-    if (!input.files?.length) {
-      return;
-    }
-
-    const file = input.files[0];
-    setFile(file?.name)
-  };
 
   return (
     <Layout>
@@ -417,30 +405,10 @@ export default function StudentQuiz() {
       {mounted &&
         ref?.current &&
         createPortal(
-          <ModalContainer
-            show={showModal}
-            handleClose={() => setShowModal(false)}
-            modalBody={
-              <div className={styles.modalBody}>
-                <h1 className={styles.fileUploadTitle}>
-                  drag & drop <br />
-                  any files
-                </h1>
-                <p className={styles.fileUploadText}>or</p>
-                <label
-                  htmlFor="file-upload-btn"
-                  className={styles.fileUploadBtn}
-                >
-                  Choose a local file
-                </label>
-                <input
-                  onChange={handleFileInput}
-                  type={"file"}
-                  id="file-upload-btn"
-                  className={styles.fileTypeInput}
-                />
-              </div>
-            }
+          <FileUploadModal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setFile={setFile}
           />,
           ref.current
         )}

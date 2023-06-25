@@ -1,11 +1,8 @@
 .modalContainer {
-    padding: 30px;
     overflow-y: hidden;
 }
 
 .modalContainer >div {
-    max-width: 1050px;
-    width: calc(100% - 60px);
     height: 100%;
 }
 
@@ -17,6 +14,7 @@
 .modalHeader {
     color: #000;
     border: none;
+    padding: 20px;
 }
 
 .closeBtn {
@@ -31,16 +29,30 @@
     margin-bottom: 0px;
 }
 
-.modalTitle {}
+.modalTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
 
 .modalBody {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px 20px;
 }
 
 .modalFooter {
     border: none;
-    padding: 16px;
+    padding: 20px;
     min-height: 50px;
+}
+
+@media screen and (max-width: 576px) {
+    .modalContainer >div {
+        padding: 30px;
+    }
+
+    .modalTitle {
+        font-size: 16px;
+    }
 }

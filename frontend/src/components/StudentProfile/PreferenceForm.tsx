@@ -8,10 +8,23 @@ import {
   interestTags,
   passionTags,
 } from "@/config/formFieldConfig";
+import { useState, useRef, useEffect } from "react";
+import { createPortal } from "react-dom";
 import FormCheckboxField from "@/components/form/FormCheckboxField";
 import GridContainer from "@/components/Containers/GridContainer";
+import FileUploadModal from "../Modals/FileUploadModal";
 
 const PreferenceForm = () => {
+  const [showModal, setShowModal] = useState(false);
+  const ref = useRef<Element | null>(null);
+  const [mounted, setMounted] = useState(false);
+  const [file, setFile] = useState("");
+
+  useEffect(() => {
+    ref.current = document.querySelector<HTMLElement>("#portal");
+    setMounted(true);
+  }, []);
+
   return (
     <div>
       <FormHeader
@@ -21,7 +34,11 @@ const PreferenceForm = () => {
         btnBackground={styles.bgBlue}
       />
       <FormRow label="Upload your profile picture">
-        <UploadFileBtn containerStyle={styles.flex1} onClick={() => {}} />
+        <UploadFileBtn
+          file={file}
+          containerStyle={styles.flex1}
+          onClick={() => setShowModal(true)}
+        />
       </FormRow>
       <FormRow label="What are you studying?">
         <FormInputField
@@ -262,6 +279,16 @@ const PreferenceForm = () => {
           className={`${styles.formInput}`}
         />
       </FormRow>
+      {mounted &&
+        ref?.current &&
+        createPortal(
+          <FileUploadModal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            setFile={setFile}
+          />,
+          ref.current
+        )}
     </div>
   );
 };

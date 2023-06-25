@@ -67,7 +67,7 @@ const BankForm = () => {
           name={"country"}
           type={"radio"}
           label={"UK"}
-          checkBoxStyle={"mx-3"}
+          checkBoxStyle={`${styles.margin0}`}
           labelClass={styles.formLabel}
           className={styles.checkInput}
         />
