@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { Container } from "react-bootstrap";
 import styles from "@/styles/Students.module.css";
+import { ReactNode } from "react";
 
 interface IStepsContainer {
   subTitle?: string;
@@ -11,6 +12,7 @@ interface IStepsContainer {
   linkText?: string;
   link?: string;
   src?: StaticImageData;
+  sectionStyle?: string;
   containerStyle?: string;
   titleStyle?: string;
   subTitleStyle?: string;
@@ -18,6 +20,7 @@ interface IStepsContainer {
   normalTextStyle?: string;
   linkStyle?: string;
   imageStyle?: string;
+  children?: ReactNode
 }
 
 const StepsContainer = ({
@@ -28,6 +31,7 @@ const StepsContainer = ({
   linkText = "",
   link = "",
   src,
+  sectionStyle = "",
   containerStyle = "",
   titleStyle = "",
   subTitleStyle = "",
@@ -35,11 +39,12 @@ const StepsContainer = ({
   normalTextStyle = "",
   linkStyle = "",
   imageStyle = "",
+  children = <></>
 }: IStepsContainer) => {
   return (
-    <section className={`${styles.stepSection}`}>
+    <section className={`${styles.stepSection} ${sectionStyle}`}>
       <Container className={`${styles.stepContainer} ${containerStyle}`}>
-        <div>
+        <div className={styles.textSection}>
           {subTitle && (
             <h6 className={`${styles.subTitle} ${subTitleStyle}`}>
               {subTitle}
@@ -54,7 +59,7 @@ const StepsContainer = ({
                 {strongText}
               </strong>
             )}
-            <br />
+            <br /><br />
             {normalText && normalText}
           </p>
           {linkText && (
@@ -70,6 +75,7 @@ const StepsContainer = ({
             alt="students home image"
           />
         )}
+        {children}
       </Container>
     </section>
   );
