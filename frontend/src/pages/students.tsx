@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import styles from "@/styles/Students.module.css";
+import StudentImage from "@/assets/images/Jezz.png";
 import StudentHomeImage from "@/assets/images/student-home.jpg";
 import StudentHomeImage21 from "@/assets/images/student-home-21.png";
 import StudentHomeImage22 from "@/assets/images/student-home-22.png";
@@ -10,6 +11,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "react-bootstrap";
 import StepsContainer from "@/components/Containers/StepsContainer";
+import IFrameContainer from "@/components/Containers/IFrameContainer";
+import { InvstedStudentHomeLink } from "@/config";
+import ValueSection from "@/components/Sections/ValueSection";
+import { InvstedBenefits } from "@/config/values";
+import GeneralCard from "@/components/Cards/GeneralCard";
 
 export default function StudentsHome() {
   return (
@@ -37,9 +43,21 @@ export default function StudentsHome() {
         titleStyle={styles.titleSteps}
       >
         <div className={styles.gallery}>
-          <Image className={`${styles.galleryImg} ${styles.customImage1}`} alt="create-profile-gallery" src={StudentHomeImage21} />
-          <Image className={`${styles.galleryImg} ${styles.customImage2}`} alt="create-profile-gallery" src={StudentHomeImage22} />
-          <Image className={`${styles.galleryImg} ${styles.customImage3}`} alt="create-profile-gallery" src={StudentHomeImage23} />
+          <Image
+            className={`${styles.galleryImg} ${styles.customImage1}`}
+            alt="create-profile-gallery"
+            src={StudentHomeImage21}
+          />
+          <Image
+            className={`${styles.galleryImg} ${styles.customImage2}`}
+            alt="create-profile-gallery"
+            src={StudentHomeImage22}
+          />
+          <Image
+            className={`${styles.galleryImg} ${styles.customImage3}`}
+            alt="create-profile-gallery"
+            src={StudentHomeImage23}
+          />
         </div>
       </StepsContainer>
       <StepsContainer
@@ -69,6 +87,99 @@ export default function StudentsHome() {
         titleStyle={styles.titleSteps}
         imageStyle={styles.smallImage}
       />
+      <section id="learn-more" className={styles.stepSection}>
+        <Container className={`${styles.stepContainer} flex-column`}>
+          <h1
+            className={`${styles.title} ${styles.titleSteps} ${styles.textYellow} mt-3`}
+          >
+            Learn more
+          </h1>
+          <p className={styles.description}>
+            The benefit of joining invstED, is that you can create a profile to
+            highlight your passions and goals, and then share this with family
+            and friends so that they can invest in you.
+            <br />
+            <br />
+            You can also choose to be discoverable to our broader investor
+            network, so others can be inspired by you, and provide support. We
+            view financial support as the first step in a longer journey of
+            building out your network and building up your cultural capital.
+          </p>
+          <IFrameContainer IframeSrc={InvstedStudentHomeLink} />
+        </Container>
+      </section>
+      <section id="why-you-should-join" className={styles.stepSection}>
+        <Container className={`${styles.stepContainer} flex-column`}>
+          <h6 className={styles.subHeading}>Student benefits</h6>
+          <h1
+            className={`${styles.title} ${styles.titleSteps} ${styles.textYellow} mt-3`}
+          >
+            Why should you join invstED?
+          </h1>
+          <ValueSection
+            config={InvstedBenefits}
+            containerClass={styles.reverse}
+          />
+        </Container>
+      </section>
+      <section id="why-you-should-join" className={styles.stepSection}>
+        <Container className={`${styles.stepContainer} flex-column`}>
+          <h1
+            className={`${styles.title} ${styles.titleSteps} ${styles.textYellow} mt-3`}
+          >
+            Meet our Ambassadors
+          </h1>
+          <div className={styles.cardContainer}>
+            {[1, 2, 3, 4, 5, 6].map((val) => {
+              return (
+                <GeneralCard
+                  key={val}
+                  cardTitle="Jezz"
+                  titleStyle={styles.titleStyle}
+                  cardImage={StudentImage}
+                  cardStyle={styles.cardStyle}
+                  cardMainBody={
+                    <div className={styles.cardBody}>
+                      <p className={styles.university}>Engineering</p>
+                      <p className={styles.university}>
+                        <strong>University of Cambridge</strong>
+                      </p>
+                      <Link
+                        className={styles.viewLink}
+                        href={"mailto:jb2433@cam.ac.uk"}
+                      >
+                        Email Jezz
+                      </Link>
+                    </div>
+                  }
+                />
+              );
+            })}
+          </div>
+          <div>
+            <h1
+              className={`${styles.title} ${styles.titleSteps} ${styles.textYellow} mt-3 ${styles.fontSize30}`}
+            >
+              Want to learn more?
+            </h1>
+            <p className={styles.description}>
+              If you are interested in becoming an ambassador, or bringing
+              invstED to your school, please email{" "}
+              <strong className={styles.textBlue}>questions@invsted.org</strong>
+            </p>
+          </div>
+        </Container>
+      </section>
+      <section
+        className={`${styles.stepSection} ${styles.joinCommunitySection}`}
+      >
+        <Container className={`${styles.stepContainer} flex-column`}>
+          <h1 className={`${styles.title} ${styles.titleSteps}`}>
+            Join our Community
+          </h1>
+          <Link href="/signup">Sign Up</Link>
+        </Container>
+      </section>
     </Layout>
   );
 }

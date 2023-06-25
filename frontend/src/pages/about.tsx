@@ -12,6 +12,7 @@ import Link from "next/link";
 import StorySection from "@/components/Sections/StorySection";
 import ValueSection from "@/components/Sections/ValueSection";
 import FAQSection from "@/components/Sections/FAQSection";
+import { InvstedValues } from "@/config/values";
 
 export default function About() {
   return (
@@ -145,7 +146,7 @@ export default function About() {
               keep us on track.
             </p>
           </div>
-          <ValueSection />
+          <ValueSection config={InvstedValues} />
         </Container>
       </section>
       <StorySection maxWidth={824} />

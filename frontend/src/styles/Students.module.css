@@ -1,7 +1,16 @@
-
 .stepSection {
     width: 100vw;
     margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.joinCommunitySection {
+    padding-bottom: 60px;
+    background-image: url("../assets/images/community-section-bg-image.png");
+    background-position: 50%;
+    background-size: cover;
+    min-height: 280px;
+    margin-bottom: 0px;
 }
 
 .stepContainer {
@@ -20,6 +29,14 @@
     line-height: 24px;
     margin-top: 0px;
     font-weight: 700;
+}
+
+.subHeading {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #000;
+    font-weight: 700;
+    font-family: Montserrat, sans-serif;
 }
 
 .title {
@@ -66,6 +83,18 @@
     display: block;
 }
 
+.description {
+    font-size: 18px;
+    line-height: 16px;
+    width: 100%;
+    max-width: 600px;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Questrial, sans-serif;
+    text-align: center;
+}
+
 .width100 {
     width: 100%;
 }
@@ -76,6 +105,19 @@
 
 .titleSteps {
     font-size: 40px;
+}
+
+.fontSize30 {
+    font-size: 30px;
+}
+
+.textYellow {
+    color: #ffe000;
+    text-align: center;
+}
+
+.textBlue {
+    color: #31c1ff
 }
 
 .bgGrey {
@@ -158,9 +200,46 @@
     gap: 60px;
 }
 
+.cardContainer {
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.titleStyle {
+    padding-top: 0px;
+}
+
+.cardStyle {
+    max-width: 270px;
+}
+
+.cardBody {}
+
+.university {
+    margin-bottom: 10px;
+}
+
+.viewLink {
+    color: #ffe000;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 991px) {
     .stepContainer {
         flex-direction: column;
+    }
+
+    .cardStyle {
+        max-width: 250px;
     }
 
     .reverse {
@@ -176,6 +255,10 @@
 
     .textSection {
         max-width: 100%;
+    }
+
+    .cardContainer {
+        gap: 30px;
     }
 
     .image {
@@ -203,15 +286,39 @@
 @media screen and (max-width: 491px) {
 
     .galleryImg {
-        max-width: 60%;
+        max-width: 200px;
+    }
+
+    .cardStyle {
+        max-width: 300px;
     }
 
     .customImage1 {
-        margin-left: -150px;
+        margin-left: -90px;
     }
 
     .customImage3 {
-        margin-top: 264px;
-        margin-left: -420px;
+        margin-top: 215px;
+        margin-left: -288px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .galleryImg {
+        max-width: 180px;
+    }
+
+    .customImage1 {
+        margin-left: -60px;
+    }
+
+    .customImage2 {
+        margin-top: 160px;
+    }
+
+    .customImage3 {
+        margin-top: 200px;
+        margin-left: -252px;
     }
 }

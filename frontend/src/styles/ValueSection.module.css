@@ -69,10 +69,19 @@
     margin-top: 8px;
     font-family: Questrial, sans-serif;
     font-weight: 400;
+    white-space: pre-line;
 }
 
 @media screen and (max-width:1200px) {
     .imageSection {
         max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .imageSection {
+        max-width: 350px;
     }
 }
