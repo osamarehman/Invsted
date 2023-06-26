@@ -6,10 +6,14 @@ import { Container } from "react-bootstrap";
 import InvestorEquityFundImg from "@/assets/images/investor-home-equity-fund.png";
 import InvestorQuizImg from "@/assets/images/investor-home-quiz.png";
 import InvestorStudentsImg from "@/assets/images/investor-home-students.png";
+import InvestorDonateImg from "@/assets/images/investor-home-donate.png";
+import QuoteImg from "@/assets/images/quote.png";
 import WhyInvstedSection from "@/components/Sections/WhyInvstedSection";
 import IFrameContainer from "@/components/Containers/IFrameContainer";
 import { InvstedInvestorsHomeLink } from "@/config";
 import StepCard from "@/components/Cards/StepCard";
+import TextCarousel from "@/components/Carousel";
+import Image from "next/image";
 
 export default function Investors() {
   return (
@@ -160,7 +164,7 @@ export default function Investors() {
         className={`${styles.marginTop100} ${styles.stepSection} ${styles.stepCardSection} ${styles.marginBottom0}`}
       >
         <Container className={`${styles.stepContainer} flex-column`}>
-        <h1
+          <h1
             className={`${styles.heading} ${styles.titleSteps} ${styles.textBlack} ${styles.maxWidth600} mt-3`}
           >
             What does it mean to be an investor?
@@ -187,7 +191,7 @@ export default function Investors() {
             <StepCard
               step={3}
               color={"yellow"}
-              heading={ "Help someone succeed" }
+              heading={"Help someone succeed"}
               linkText="Donate Today"
               linkHref="/equity-fund"
               bgColor="yellow"
@@ -195,6 +199,36 @@ export default function Investors() {
             />
           </div>
         </Container>
+      </section>
+      <section
+        id="learn-more"
+        className={`${styles.stepSection} ${styles.marginBottom0} ${styles.marginTop0} ${styles.bgBlue}`}
+      >
+        <Container className={`${styles.stepContainer} flex-column ${styles.customGap}`}>
+          <Image src={QuoteImg} width={78} alt="quote" />
+          <TextCarousel
+            quotes={[
+              '"It is powerful to think of investing in someone so they can become everything they want to. Being an investor shows you are an active part of their life, not just a passive observer."',
+              `"I love investing in a student and knowing that my donation is contributing to them becoming something they otherwise would not be able to become."`,
+              `"I chose invstED because I wanted to find someone that hasn't had the same opportunities as I have had, but could have them because of my donation."`,
+              `"If I give to a big organisation, for all I know my money is going to marketing or something. When I give through invstED, I know my money is going directly to a student who needs it."`,
+            ]}
+          />
+        </Container>
+      </section>
+      <section id="join-community-section" className={styles.communitySection}>
+        <div className={styles.imageOverlay}>
+          <Container className={styles.communityContainer}>
+            <div className={styles.communityTextSection}>
+              <p className={styles.communityText}>
+                Be a part of someone&#39;s success
+              </p>
+              <Link href="/" className={styles.communitylink}>
+                Join Now
+              </Link>
+            </div>
+          </Container>
+        </div>
       </section>
     </Layout>
   );
