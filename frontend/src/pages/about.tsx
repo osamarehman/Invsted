@@ -22,12 +22,12 @@ export default function About() {
         src={AboutImage4}
         title={"Our Mission"}
         textNode={
-          <strong className="bold-text-6">
+          <div className="bold-text-6">
             Our platform creates opportunities for connection, and empowers
             students one dollar and one relationship at a time by reducing
             barriers to higher education through investments, financial
             education and community empowerment.
-          </strong>
+          </div>
         }
         justifyContent="end"
         backgroundColor="#69df41"
