@@ -24,15 +24,15 @@ const FAQSection = () => {
       <section id="faq-section" className={styles.faqSection}>
         <Container className={styles.faqContainer}>
           <div className={styles.btnContainer}>
-            <Button
+            <button
               onClick={() => setFaqs(invstedFAQs)}
               className={`${styles.btn} ${
                 faqs[0].headingColor === "green" ? `${styles["green-bg"]}` : `${styles["white-bg"]}`
               }`}
             >
               Invsted FAQ
-            </Button>
-            <Button
+            </button>
+            <button
               onClick={() => setFaqs(studentFAQs)}
               className={`${styles.btn} ${
                 faqs[0]["headingColor"] === "yellow"
@@ -41,15 +41,15 @@ const FAQSection = () => {
               }`}
             >
               Students FAQ
-            </Button>
-            <Button
+            </button>
+            <button
               onClick={() => setFaqs(investorFAQs)}
               className={`${styles.btn} ${
                 faqs[0]["headingColor"] === "blue" ? `${styles["blue-bg"]}` : `${styles["white-bg"]}`
               }`}
             >
               Investors FAQ
-            </Button>
+            </button>
           </div>
           <div className={styles.faqs}>
             {faqs.map((faq, _idx: number) => (
