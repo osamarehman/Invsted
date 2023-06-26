@@ -33,6 +33,7 @@ const StorySection = ({maxWidth = "unset"}:IStorySection) => {
           <div className={styles.cardContainer}>
             <StepCard
               step={1}
+              color={"blue"}
               heading={"Raised by a single mother and grew up in poverty"}
               description={
                 `Like Brianna, millions of high-achieving, low-income students across 
@@ -42,6 +43,7 @@ const StorySection = ({maxWidth = "unset"}:IStorySection) => {
             />
             <StepCard
               step={2}
+              color={"green"}
               heading={"Faced food insecurity, housing instability and homelessness"}
               description={
                 `Eight million US and UK university students live in poverty and face food & 
@@ -51,6 +53,7 @@ const StorySection = ({maxWidth = "unset"}:IStorySection) => {
             />
             <StepCard
               step={3}
+              color={"yellow"}
               heading={"Worked multiple jobs to afford school & support her family"}
               description={
                 `Brianna worked multiple jobs during college to afford school and basic necessities, 

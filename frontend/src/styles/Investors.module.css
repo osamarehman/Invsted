@@ -1,4 +1,3 @@
-
 .stepSection {
     width: 100vw;
     margin-bottom: 20px;
@@ -39,7 +38,11 @@
 }
 
 .textBlue {
-    color: #31c1ff;
+    color: #31c1ff !important;
+}
+
+.textBlack {
+    color: #000 !important;
 }
 
 .bgWhite {
@@ -94,7 +97,7 @@
     padding: 15px 25px;
     font-family: Montserrat, sans-serif;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: bold;
     transition: background-color .2s, background-position .2s, color .2s, border .2s, box-shadow .2s;
     text-decoration: none;
     white-space: nowrap;
@@ -127,6 +130,7 @@
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .sectionDesc {
@@ -140,8 +144,89 @@
     display: block;
 }
 
+.stepCardSection {
+    background-image: url("../assets/images/invsted-bg-img.png");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.imageCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .marginTop100 {
-    margin-top: 100px;
+    margin-top: 100px !important;
+}
+
+.imageBig {
+    max-width: 440px !important;
+    z-index: 4;
+}
+
+.imageStyle {
+    height: 450px !important;
+}
+
+.imageLeft {
+    margin-right: -30px;
+    z-index: 1;
+}
+
+.imageRight {
+    margin-left: -30px;
+    z-index: 1;
+}
+
+.maxWidth300 {
+    max-width: 300px !important;
+}
+
+.maxWidth600 {
+    max-width: 600px !important;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.titleSteps {
+    font-size: 40px;
+}
+
+.lineHeight24 {
+    line-height: 24px;
+}
+
+.marginBottom100 {
+    margin-bottom: 100px !important;
+}
+
+.marginBottom0 {
+    margin-bottom: 0px !important;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 16px;
+    width: 100%;
+    max-width: 600px;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Questrial, sans-serif;
+    text-align: center;
+}
+
+.cardContainer {
+    width: 100%;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+    align-items: end;
 }
 
 @media screen and (max-width: 991px) {
@@ -154,6 +239,10 @@
         min-height: 675px;
         min-width: 400px;
     }
+
+    .cardContainer {
+        grid-column-gap: 0px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -161,6 +250,10 @@
         min-height: 375px;
         padding-left: 50px;
         padding-right: 50px;
+    }
+
+    .cardContainer {
+        grid-template-columns: 1fr;
     }
 
     .bgInvestor {
@@ -171,6 +264,31 @@
     .heading {
         font-size: 35px;
     }
+
+    .imageCardContainer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .imageStyle {
+        height: 300px !important;
+    }
+
+    .imageBig {
+        max-width: 100% !important;
+    }
+
+    .imageLeft {
+        margin-right: 0px !important;
+    }
+
+    .imageRight {
+        margin-left: 0px !important;
+    }
+
+    .maxWidth300 {
+        max-width: 90% !important;
+    }
 }
 
 @media screen and (max-width: 491px) {
@@ -178,6 +296,7 @@
     .stepContainer {
         flex-direction: column-reverse;
     }
+
     .textSection {
         margin-left: 0px;
         min-width: 100%;
