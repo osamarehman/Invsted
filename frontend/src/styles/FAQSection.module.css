@@ -75,14 +75,33 @@
 
 .blue-bg {
     background-color: #31c1ff;
+    background-image: url("https://uploads-ssl.webflow.com/634f00870700514f27d65385/638cbd212a2fb8423c0c2322_Button%20Wave.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: rgba(97, 114, 131, 0);
+    border-radius: 6px;
 }
 
 .green-bg {
     background-color: #69df41;
+    background-image: url("https://uploads-ssl.webflow.com/634f00870700514f27d65385/638cbd212a2fb8423c0c2322_Button%20Wave.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: rgba(97, 114, 131, 0);
+    border-radius: 6px;
 }
 
 .yellow-bg {
-    background-color: #ffe000;
+    background-color: #ffe000;  
+    background-image: url("https://uploads-ssl.webflow.com/634f00870700514f27d65385/638cbd212a2fb8423c0c2322_Button%20Wave.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: rgba(97, 114, 131, 0);
+    border-radius: 6px;
+    
 }
 
 .white-bg {
