@@ -189,7 +189,7 @@
 
 @media screen and (min-width: 798px) {
 
-    .btn{
+    .btnContainer{
     flex-wrap: nowrap;
 }
 }
