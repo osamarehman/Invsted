@@ -48,7 +48,7 @@ const FooterRight = () => {
             </Link>
           </li>
           <li className={styles.list}>
-            <Link href="/student-bank-info" className={styles.links}>
+            <Link href="/dashboard" className={styles.links}>
               Bank Info
             </Link>
           </li>

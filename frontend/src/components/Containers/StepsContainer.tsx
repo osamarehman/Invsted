@@ -20,7 +20,8 @@ interface IStepsContainer {
   normalTextStyle?: string;
   linkStyle?: string;
   imageStyle?: string;
-  children?: ReactNode
+  isTextSection?: boolean;
+  children?: ReactNode;
 }
 
 const StepsContainer = ({
@@ -39,35 +40,39 @@ const StepsContainer = ({
   normalTextStyle = "",
   linkStyle = "",
   imageStyle = "",
-  children = <></>
+  isTextSection = true,
+  children = <></>,
 }: IStepsContainer) => {
   return (
     <section className={`${styles.stepSection} ${sectionStyle}`}>
       <Container className={`${styles.stepContainer} ${containerStyle}`}>
-        <div className={styles.textSection}>
-          {subTitle && (
-            <h6 className={`${styles.subTitle} ${subTitleStyle}`}>
-              {subTitle}
-            </h6>
-          )}
-          {title && (
-            <h1 className={`${styles.title} ${titleStyle}`}>{title}</h1>
-          )}
-          <p className={`${styles.text} ${normalTextStyle}`}>
-            {strongText && (
-              <strong className={`${styles.strongText} ${strongTextStyle}`}>
-                {strongText}
-              </strong>
+        {isTextSection && (
+          <div className={styles.textSection}>
+            {subTitle && (
+              <h6 className={`${styles.subTitle} ${subTitleStyle}`}>
+                {subTitle}
+              </h6>
             )}
-            <br /><br />
-            {normalText && normalText}
-          </p>
-          {linkText && (
-            <Link className={`${styles.link} ${linkStyle}`} href={link}>
-              {linkText}
-            </Link>
-          )}
-        </div>
+            {title && (
+              <h1 className={`${styles.title} ${titleStyle}`}>{title}</h1>
+            )}
+            <p className={`${styles.text} ${normalTextStyle}`}>
+              {strongText && (
+                <strong className={`${styles.strongText} ${strongTextStyle}`}>
+                  {strongText}
+                </strong>
+              )}
+              <br />
+              <br />
+              {normalText && normalText}
+            </p>
+            {linkText && (
+              <Link className={`${styles.link} ${linkStyle}`} href={link}>
+                {linkText}
+              </Link>
+            )}
+          </div>
+        )}
         {src && (
           <Image
             className={`${styles.image} ${imageStyle}`}

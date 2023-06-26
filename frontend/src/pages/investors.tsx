@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import InvestorEquityFundImg from "@/assets/images/investor-home-equity-fund.png";
 import InvestorQuizImg from "@/assets/images/investor-home-quiz.png";
 import InvestorStudentsImg from "@/assets/images/investor-home-students.png";
-import InvestorDonateImg from "@/assets/images/investor-home-donate.png";
+import InvestorDonateImg from "@/assets/images/investor-home-donate.jpg";
 import QuoteImg from "@/assets/images/quote.png";
 import WhyInvstedSection from "@/components/Sections/WhyInvstedSection";
 import IFrameContainer from "@/components/Containers/IFrameContainer";
@@ -14,6 +14,7 @@ import { InvstedInvestorsHomeLink } from "@/config";
 import StepCard from "@/components/Cards/StepCard";
 import TextCarousel from "@/components/Carousel";
 import Image from "next/image";
+import StepsContainer from "@/components/Containers/StepsContainer";
 
 export default function Investors() {
   return (
@@ -204,7 +205,9 @@ export default function Investors() {
         id="learn-more"
         className={`${styles.stepSection} ${styles.marginBottom0} ${styles.marginTop0} ${styles.bgBlue}`}
       >
-        <Container className={`${styles.stepContainer} flex-column ${styles.customGap}`}>
+        <Container
+          className={`${styles.stepContainer} flex-column ${styles.customGap}`}
+        >
           <Image src={QuoteImg} width={78} alt="quote" />
           <TextCarousel
             quotes={[
@@ -216,6 +219,34 @@ export default function Investors() {
           />
         </Container>
       </section>
+      <StepsContainer
+        containerStyle={styles.justifySpaceAround}
+        sectionStyle={``}
+        imageStyle={``}
+        src={InvestorDonateImg}
+        isTextSection={false}
+      >
+        <div className={styles.equitySection}>
+          <h1 className={styles.equitySubHeading}>Donate to our</h1>
+          <h1 className={styles.equityHeading}>Equity Fund</h1>
+          <p>
+            Rather than donating to a specific student, you can instead choose
+            to donate directly to our <strong className={styles.textBlue}>Equity Fund.</strong> This money
+            is designed to counter biases and work actively toward equity.
+            <br />
+            <br />
+            When you donate to our Equity Fund, we take your donation and
+            distribute it to students who need support but might not be getting
+            invested in. We use this money to actively fight against common
+            biases that show up, such as racial and pretty bias.
+            <br />
+            <br />
+            By donating to our Equity Fund, you are ensuring that your
+            investment is going toward the students who need support the most.
+          </p>
+          <Link className={styles.equityLink} href="/equity-fund">Donate Today</Link>
+        </div>
+      </StepsContainer>
       <section id="join-community-section" className={styles.communitySection}>
         <div className={styles.imageOverlay}>
           <Container className={styles.communityContainer}>
