@@ -169,7 +169,7 @@
     padding: 20px;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
     .heading {
     
     margin-bottom: 16px;
