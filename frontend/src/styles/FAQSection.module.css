@@ -169,6 +169,16 @@
     padding: 20px;
 }
 
+@media screen and (max-width: 550px) {
+    .heading {
+    
+    margin-bottom: 16px;
+    font-size: 40px;
+    line-height: 42px;
+    
+ }
+}
+
 @media screen and (max-width: 479px) {
     .heading {
         font-size: 40px;
