@@ -1,0 +1,198 @@
+
+.stepSection {
+    width: 100vw;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.stepContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1248px;
+}
+
+.bgInvestor {
+    background-image: url("../assets/images/investors-home.png");
+    background-position: 50% 0;
+    background-size: cover;
+    height: 675px;
+    min-width: 540px;
+}
+
+.textSection {
+    min-height: 450px;
+    max-width: 440px;
+    background-color: #31c1ff;
+    padding-left: 70px;
+    padding-right: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -50px;
+}
+
+.textWhite {
+    color: #fff;
+}
+
+.textBlue {
+    color: #31c1ff;
+}
+
+.bgWhite {
+    background-color: #fff;
+}
+
+.bgBlue {
+    background-color: #31c1ff;
+}
+
+.borderBottomWhite {
+    border-bottom: 2px solid #fff;
+}
+
+.smallHeading {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 13.5px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+    margin-bottom: 24px;
+}
+
+.link {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    font-family: Questrial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    transition: opacity .2s;
+    text-decoration: none;
+}
+
+.linkBtn {
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: fit-content;
+    padding: 15px 25px;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background-color .2s, background-position .2s, color .2s, border .2s, box-shadow .2s;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sectionTitleWide {
+    max-width: 720px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectionTitleDesc {
+    width: 100%;
+    max-width: 600px;
+    color: #000;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Questrial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.sectionDescriptionWide {
+    text-align: center;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sectionDesc {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    margin-left: auto;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 35px auto 0 0;
+    max-width: 650px;
+    display: block;
+}
+
+.marginTop100 {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 991px) {
+    .textSection {
+        margin-left: -100px;
+    }
+
+    .bgInvestor {
+        height: auto;
+        min-height: 675px;
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .textSection {
+        min-height: 375px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .bgInvestor {
+        min-height: 500px;
+        min-width: 300px;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 491px) {
+
+    .stepContainer {
+        flex-direction: column-reverse;
+    }
+    .textSection {
+        margin-left: 0px;
+        min-width: 100%;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .link {
+        font-size: 13px;
+    }
+
+    .bgInvestor {
+        min-height: 400px;
+        min-width: 100%;
+    }
+}
