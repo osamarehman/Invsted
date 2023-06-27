@@ -71,11 +71,23 @@
     display: inline-block;
 }
 
+.link:hover {
+    color: #fff;
+    background-color: #69df41;
+    box-shadow: 0 8px 16px 4px rgba(0, 0, 0, .3);
+}
+
 .investoryLink {
     letter-spacing: 2px;
     background-color: #69df41;
     padding: 15px 25px;
     margin-top: 0px;
+}
+
+.investoryLink:hover {
+    color: #fff;
+    background-color: #31c1ff;
+    border: 1px solid #31c1ff;
 }
 
 .quizImg {
@@ -166,6 +178,12 @@
     font-size: 12px;
     font-weight: bold;
     transition: background-color .2s, background-position .2s, color .2s, border .2s, box-shadow .2s;
+}
+
+.submitBtn:hover {
+    color: #fff;
+    background-color: #69df41;
+    box-shadow: 0 8px 16px 4px rgba(0, 0, 0, .3);
 }
 
 /* .checkInput {

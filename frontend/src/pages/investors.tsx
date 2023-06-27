@@ -94,7 +94,7 @@ export default function Investors() {
               linkText="INVESTOR QUIZ"
             />
           </div>
-          <Link className={`${styles.linkBtn} ${styles.bgBlue}`} href="/signup">
+          <Link className={`${styles.linkBtn} ${styles.bgBlue} ${styles.joinNowHover}`} href="/signup">
             JOIN TODAY
           </Link>
         </Container>

@@ -82,6 +82,10 @@
     margin-top: 15px;
 }
 
+.customLink:hover {
+    color: rgba(26, 27, 31, .75);
+}
+
 .cartBtn {
     background-color: #31c1ff;
     border-radius: 10px;

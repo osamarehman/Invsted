@@ -28,7 +28,8 @@ export default function StudentsHome() {
         normalText="Our platform allows others to provide the every day support you need so you can focus on school, not your struggles"
         linkText="Learn More"
         link="/about"
-        linkStyle={styles.width100}
+        titleStyle={styles.welcomeTitle}
+        linkStyle={`${styles.width100} ${styles.linkHover}`}
         src={StudentHomeImage}
       />
       <WhyInvstedSection
@@ -87,7 +88,7 @@ export default function StudentsHome() {
         linkText="Create Profile"
         link="/student-quiz"
         containerStyle={`${styles.reverse} ${styles.gap}`}
-        linkStyle={styles.widthFitContent}
+        linkStyle={`${styles.widthFitContent} ${styles.linkHoverCreateProfile}`}
         sectionStyle={`${styles.bgGrey} ${styles.height600}`}
         titleStyle={styles.titleSteps}
       >
@@ -118,7 +119,7 @@ export default function StudentsHome() {
         link="/student-profile"
         src={StudentHomeImage3}
         containerStyle={styles.gap}
-        linkStyle={styles.widthFitContent}
+        linkStyle={`${styles.widthFitContent} ${styles.linkHoverCreateProfile}`}
         titleStyle={styles.titleSteps}
         imageStyle={styles.smallImage}
       />
@@ -132,7 +133,7 @@ export default function StudentsHome() {
         src={StudentHomeImage4}
         containerStyle={`${styles.reverse} ${styles.gap}`}
         sectionStyle={styles.bgGrey}
-        linkStyle={styles.widthFitContent}
+        linkStyle={`${styles.widthFitContent} ${styles.linkHoverCreateProfile}`}
         titleStyle={styles.titleSteps}
         imageStyle={styles.smallImage}
       />

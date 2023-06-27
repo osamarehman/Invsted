@@ -11,7 +11,7 @@ const BankForm = () => {
         title="Bank Information"
         description="Please share your bank information, so we can transfer donations directly to you. This information will be stored securely in our systems."
         // onClick={() => {}}
-        btnBackground={styles.beYellow}
+        btnBackground={styles.bgYellow}
       />
       <FormRow label="First Name">
         <FormInputField

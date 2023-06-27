@@ -163,6 +163,10 @@
     font-size: 14px;
 }
 
+.itemBtn:hover {
+    background-color: #69df41;
+}
+
 .description {
     margin-top: 10px;
 }

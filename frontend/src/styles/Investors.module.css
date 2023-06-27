@@ -49,8 +49,20 @@
     background-color: #fff;
 }
 
+.bgWhite:hover {
+    color: #fff;
+    background-color: #6fdd53;
+    border: 1px solid #6fdd53;
+}
+
 .bgBlue {
     background-color: #31c1ff;
+}
+
+.joinNowHover:hover {
+    color: #fff;
+    background-color: #69df41;
+    box-shadow: 0 8px 16px 4px rgba(0, 0, 0, .3);
 }
 
 .borderBottomWhite {
@@ -290,6 +302,11 @@
     white-space: nowrap;
 }
 
+.communitylink:hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, .2);
+}
+
 .customGap {
     padding-top: 40px;
     padding-bottom: 100px;
@@ -335,6 +352,11 @@
     transition: box-shadow .2s;
     position: relative;
     box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0);
+}
+
+.equityLink:hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, .2);
 }
 
 .justifySpaceAround {

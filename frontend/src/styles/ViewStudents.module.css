@@ -88,7 +88,7 @@
 }
 
 .cardStyle {
-    max-width: 230px;
+    max-width: 230px !important;
 }
 
 .cardBody {}
@@ -111,7 +111,7 @@
     }
 
     .cardStyle {
-        max-width: 250px;
+        max-width: 250px !important;
     }
 }
 
@@ -133,6 +133,6 @@
 @media screen and (max-width: 550px) {
 
     .cardStyle {
-        max-width: 300px;
+        max-width: 300px !important;
     }
 }
