@@ -7,6 +7,7 @@ import EquityDonateImg from "@/assets/images/investor-home-donate.jpg";
 import styles from "@/styles/EquityFund.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "react-bootstrap";
 
 export default function EquityFund() {
   return (
@@ -86,7 +87,9 @@ export default function EquityFund() {
             What is an Equity Fund?
           </h1>
           <div className={`${styles.listSection} ${styles.borderList}`}>
-            <h6 className={styles.smallHeading}>We are driven by a fundamental belief in equity</h6>
+            <h6 className={styles.smallHeading}>
+              We are driven by a fundamental belief in equity
+            </h6>
             <p>
               While we do not live in an equitable world, every effort made and
               every dollar spent toward equity has a compounding effect and
@@ -94,7 +97,9 @@ export default function EquityFund() {
             </p>
           </div>
           <div className={`${styles.listSection} ${styles.borderList}`}>
-            <h6 className={styles.smallHeading}>Actively counter common biases</h6>
+            <h6 className={styles.smallHeading}>
+              Actively counter common biases
+            </h6>
             <p>
               Rather than donating to a specific student, you can instead choose
               to donate directly to our Equity Fund. This pool of money is
@@ -102,7 +107,9 @@ export default function EquityFund() {
             </p>
           </div>
           <div className={`${styles.listSection} ${styles.borderList}`}>
-            <h6 className={styles.smallHeading}>Give to students who need support the most</h6>
+            <h6 className={styles.smallHeading}>
+              Give to students who need support the most
+            </h6>
             <p>
               When you donate to our Equity Fund, we take your donation and
               distribute it to students who need support but might not be
@@ -111,6 +118,51 @@ export default function EquityFund() {
           </div>
         </div>
       </StepsContainer>
+      <StepsContainer
+        containerStyle={`${styles.justifyStepAround} ${styles.reverse}`}
+        src={EquityFundDonateImg}
+        isTextSection={false}
+      >
+        <div className={styles.headerTextSection}>
+          <h6 className={`${styles.subHeading} ${styles.textBlue}`}>
+            Equity Fund
+          </h6>
+          <h1 className={styles.heading}>Donate Today</h1>
+          <p>
+            Choose a recurring or one-time donation to our Equity Fund, and know
+            your money is going to the students most in need
+          </p>
+          <div className={styles.linkContainer}>
+            <Link
+              className={`${styles.linkBtn} ${styles.bgBlue} ${styles.donationButton}`}
+              href={"https://donate.stripe.com/8wM2aHbl1abv2sg289"}
+            >
+              Recurring Donations
+            </Link>
+            <Link
+              className={`${styles.linkBtn} ${styles.bgGreen} ${styles.donationButton}`}
+              href={"https://buy.stripe.com/dR6g1x2OvfvP1ocdQT"}
+            >
+              One Time Donation
+            </Link>
+          </div>
+        </div>
+      </StepsContainer>
+      <section className={`${styles.shareInvstedSection} ${styles.marginTop100}`} id="share-invsted">
+        <Container className={styles.shareInvstedContainer}>
+          <div className={`${styles.shareInvsted} ${styles.bgBlue}`}>
+            <div className={styles.shareInvstedText}>
+              <h3 className={`${styles.heading} ${styles.textWhite}`}>Share invstED</h3>
+              <p className={styles.maxWidth400}>
+                Learn more about invstED, meet our team, and read about our
+                mission and story
+              </p>
+              <Link className={`${styles.linkBtn} ${styles.bgWhite} ${styles.shareBtn}`} href="/about">Learn More</Link>
+            </div>
+            <Image className={`${styles.image} ${styles.shareImage}`} src={EquityFundShareImg} alt="invsted share image" />
+          </div>
+        </Container>
+      </section>
     </Layout>
   );
 }
