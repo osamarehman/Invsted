@@ -23,7 +23,7 @@
     color: #000;
     background-color: rgba(0, 0, 0, 0);
     margin-right: 20px;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-decoration: none;
     transition: color .2s;
@@ -37,7 +37,7 @@
 .navBtn {
     box-shadow: none;
     color: #222525;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     padding: 10px 24px;
     font-weight: 700;
     background-color: #f8f6f4;
