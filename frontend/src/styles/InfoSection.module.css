@@ -14,7 +14,7 @@
     padding: 40px;
     background-color: #ffe000;
     position: relative;
-    max-width: 800px;
+    max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -30,7 +30,7 @@
 
 .statsImage {
     z-index: 1;
-    translate: -80px 115px;
+    translate: -150px 115px;
 }
 
 .textSection {
@@ -54,7 +54,7 @@
     padding-top: 0;
     /* width: 400px; */
     direction: ltr;
-    text-align: center;
+    text-align: left;
     padding-left: 20px;
 }
 
@@ -74,7 +74,7 @@
 
 @media screen and (max-width: 991px) {
     .container {
-        max-width: 728px;
+        max-width: 750px;
     }
 
     .textSection {
@@ -82,7 +82,7 @@
     }
 
     .statsImage {
-        translate: -120px 80px;
+        translate: -140px 80px;
     }
 }
 
@@ -106,13 +106,19 @@
     }
 
     .statsImage {
-        translate: 0px -60px;
+        translate: 0px -70px;
     }
 }
 
 @media screen and (max-width: 479px) {
     .title {
         font-size: 25px;
+    }
+
+    .statsImage {
+        max-width: 150px;
+        translate: 0px -50px;
+        height: auto;
     }
 
     .infoSection {
