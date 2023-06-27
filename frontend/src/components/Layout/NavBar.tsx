@@ -99,7 +99,7 @@ function LoggedOutView() {
                 Sign Up
             </Nav.Link>
             <Nav.Link as={Link} href="/login" className={`${styles.navLinks}`}>
-                Login
+                Log In
             </Nav.Link>
             <Nav.Link as={Link} href="/about" className={styles.navBtnLink}>
                 <Button className={`${styles.navBtn}`}>
