@@ -42,6 +42,14 @@
    margin-bottom: 100px;
  }
 
+ .titleStyle {
+   text-align: left !important;
+ }
+
+ .textStyle {
+   text-align: left !important;
+ }
+
  .teamContainer {
    margin-bottom: 100px;
    z-index: 1;
@@ -100,17 +108,17 @@
    gap: 16px;
  }
 
-.valueSection {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-top: -150px;
-  background-color: #fff;
-  padding-top: 40px;
-}
+ .valueSection {
+   border-top-left-radius: 20px;
+   border-top-right-radius: 20px;
+   margin-top: -150px;
+   background-color: #fff;
+   padding-top: 40px;
+ }
 
-.valueSectionHeading {
-  margin-top: 0px;
-}
+ .valueSectionHeading {
+   margin-top: 0px;
+ }
 
  @media screen and (max-width: 1100px) {
    .textSectionStyles {

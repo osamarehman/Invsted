@@ -114,7 +114,7 @@ export default function Home() {
             </strong>
           }
           justifyContent="end"
-          backgroundColor="#ffe000"
+          backgroundColor="#69df41"
           titleColor="#fff"
         />
         <ShortDemoSection />

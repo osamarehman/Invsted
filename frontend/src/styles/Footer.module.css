@@ -32,6 +32,12 @@
     color: #fff;
     transition: opacity .2s;
     text-decoration: none;
+    font-weight: 700;
+}
+
+.links:hover {
+    color: #fff;
+    opacity: 1;
 }
 
 .logo {
@@ -85,6 +91,11 @@
     height: 16px;
     max-width: 100%;
     display: inline-block;
+}
+
+.socialLinks:hover {
+    background-color: rgba(255, 255, 255, .25);
+    transform: scale(1.1);
 }
 
 .footerRight {

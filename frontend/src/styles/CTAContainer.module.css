@@ -60,6 +60,11 @@
     background-color: #69df41;
 }
 
+.link2:hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, .2);
+}
+
 @media screen and (max-width: 991px) {
     .flexContainer {
         flex-direction: column;

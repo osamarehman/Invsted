@@ -36,7 +36,7 @@
 
 .heading {
     color: #000;
-    font-weight: bold;
+    font-weight: 700;
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 6px;
@@ -44,7 +44,12 @@
     transition: transform .2s, border-color .2s, background-color .2s;
     text-align: left;
     cursor: pointer;
+    font-family: Montserrat, sans-serif;
     max-width: 100%;
+}
+
+.heading:hover {
+    transform: translate(8px);
 }
 
 .container {

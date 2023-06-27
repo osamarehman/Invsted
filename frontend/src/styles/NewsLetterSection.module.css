@@ -18,7 +18,7 @@
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 50%;
+    width: 45%;
 }
 
 .heading {
@@ -45,7 +45,7 @@
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 50%;
+    width: 55%;
 }
 
 .formElement {
@@ -76,6 +76,10 @@
     padding: 9px 15px;
     display: inline-block;
     font-family: Montserrat, sans-serif;
+}
+
+.btn:hover {
+    background-color: #11b954;
 }
 
 @media screen and (max-width: 991px) {
@@ -112,4 +116,23 @@
         width: 100%;
         padding-top: 0px;
     }
+}
+
+@media screen and (max-width: 491px) {
+
+    .container {
+        max-width: 100%;
+    }
+    .formElement {
+        font-size: 12px;
+        height: 40px;
+        padding: 4px 12px;
+    }
+
+    .btn {
+        font-size: 12px;
+        height: 40px;
+        padding: 5px;
+    }
+
 }

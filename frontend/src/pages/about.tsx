@@ -29,6 +29,8 @@ export default function About() {
             education and community empowerment.
           </div>
         }
+        titleStyle={styles.titleStyle}
+        textStyle={styles.textStyle}
         justifyContent="end"
         backgroundColor="#69df41"
         titleColor="#fff"

@@ -19,6 +19,8 @@ interface IInfoSection {
   textSectionStyles?: string,
   imageStyle?: string,
   sectionStyle?: string,
+  titleStyle?: string,
+  textStyle?: string,
 }
 
 const InfoSection = ({
@@ -37,7 +39,9 @@ const InfoSection = ({
   containerStyle = "",
   textSectionStyles = "",
   imageStyle = "",
-  sectionStyle = ""
+  sectionStyle = "",
+  titleStyle = "",
+  textStyle = "",
 }: IInfoSection) => {
   return (
     <section className={`${styles.infoSection} ${sectionStyle}`}>
@@ -65,10 +69,10 @@ const InfoSection = ({
         <div className={`${styles.textSection} ${textSectionStyles}`} >
           <div className={styles.sectionWrapper}></div>
           <div className={styles.textContainer}>
-            <h3 className={styles.title} style={{ color: titleColor }}>
+            <h3 className={`${styles.title} ${titleStyle}`} style={{ color: titleColor }}>
               {title}
             </h3>
-            <div className={styles.description}>{textNode}</div>
+            <div className={`${styles.description} ${textStyle}`}>{textNode}</div>
           </div>
         </div>
       </div>
