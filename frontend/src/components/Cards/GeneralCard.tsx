@@ -16,6 +16,7 @@ interface IGeneralCard {
   bodyStyle?: string,
   mainSectionStyle?: string,
   footerStyle?: string,
+  onClick?: () => void
 }
 
 const GeneralCard = ({
@@ -30,10 +31,11 @@ const GeneralCard = ({
   descriptionStyle = "",
   bodyStyle = "",
   mainSectionStyle = "",
-  footerStyle = ""
+  footerStyle = "",
+  onClick = () => {},
 }: IGeneralCard) => {
   return (
-    <Card className={`${styles.cardContainer} ${cardStyle}`}>
+    <Card onClick={onClick} className={`${styles.cardContainer} ${cardStyle}`}>
       {cardImage && <Image className={`${styles.cardImage} ${imageStyle}`} alt="base image" src={cardImage} />}
       <Card.Body className={`${styles.cardBody} ${bodyStyle}`} >
         <Card.Title className={`${styles.cardTitle} ${titleStyle}`}>{cardTitle}</Card.Title>

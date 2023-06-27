@@ -89,6 +89,7 @@
 
 .cardStyle {
     max-width: 230px !important;
+    cursor: pointer !important;
 }
 
 .cardBody {}
